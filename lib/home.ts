@@ -8,6 +8,7 @@ export type Slide = { title: string; text: string; image: string; href: string }
 
 export type Card = {
   title: string
+  /** Пустая строка — описания нет, под названием сразу идёт строка с разделом и годом */
   text: string
   /** Строка под описанием: «РАЗДЕЛ | ТИП | ГОД» */
   meta: string[]
@@ -80,5 +81,10 @@ export const BLOCKS: Block[] = [
       [card(9, 1), card(10, 2), card(11, 1)],
       [card(12, 2, ['ДИЗАЙН', 'МЕБЕЛЬ', '2025']), card(13, 1, ['ДИЗАЙН', 'СВЕТ', '2025']), card(14, 1, ['ДИЗАЙН', 'ТЕКСТИЛЬ', '2024'])],
     ],
+  },
+  {
+    kind: 'work',
+    label: 'ПРЕДМЕТЫ',
+    rows: [[{ ...card(15, 2, ['ДИЗАЙН', 'ПРЕДМЕТЫ', '2022']), text: '' }, card(16, 2, ['ДИЗАЙН', 'ПРЕДМЕТЫ', '2024'])]],
   },
 ]

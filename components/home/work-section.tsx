@@ -56,9 +56,11 @@ function ProjectTile({ card, tone }: { card: Card; tone: number }) {
           {card.title}
         </h3>
       </a>
-      <p className={`mt-5 text-[15px] leading-[1.65] tracking-[0.02em] text-foreground/75 ${wide ? '' : 'line-clamp-5'}`}>
-        {card.text}
-      </p>
+      {card.text && (
+        <p className={`mt-5 text-[15px] leading-[1.65] tracking-[0.02em] text-foreground/75 ${wide ? '' : 'line-clamp-5'}`}>
+          {card.text}
+        </p>
+      )}
       <p className="mt-6 text-[12px] uppercase tracking-[0.16em] text-muted-foreground">
         {card.meta.map((m, k) => (
           <span key={k}>
