@@ -1,0 +1,92 @@
+name: Preview Deploy
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.3.4
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build preview on GitHub runner
+        run: |
+          rm -rf .next-preview
+          NEXT_DIST_DIR=.next-preview pnpm build
+          tar -czf aureagency-preview-build.tgz .next-preview
+
+      - name: Upload preview build
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.KZ_HOST }}
+          username: ${{ secrets.KZ_USER }}
+          key: ${{ secrets.KZ_SSH_KEY }}
+          source: aureagency-preview-build.tgz
+          target: /tmp
+
+      - name: Deploy preview
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.KZ_HOST }}
+          username: ${{ secrets.KZ_USER }}
+          key: ${{ secrets.KZ_SSH_KEY }}
+          command_timeout: 20m
+          script: |
+            set -e
+
+            cd /opt/olnoo/projects/aureagency-preview
+
+            git fetch origin
+            git reset --hard "${{ github.event.pull_request.head.sha || github.sha }}"
+
+            pnpm install --frozen-lockfile
+
+            rm -rf .next-preview
+            tar -xzf /tmp/aureagency-preview-build.tgz -C .
+
+            rm -rf .next-old
+            if [ -d .next ]; then mv .next .next-old; fi
+            mv .next-preview .next
+
+            systemctl restart aureagency-preview
+            rm -rf .next-old
+            rm -f /tmp/aureagency-preview-build.tgz
+
+      - name: Check preview locally
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.KZ_HOST }}
+          username: ${{ secrets.KZ_USER }}
+          key: ${{ secrets.KZ_SSH_KEY }}
+          script: |
+            set -e
+            for i in $(seq 1 12); do
+              code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3221 || true)
+              [ "$code" = "200" ] && break
+              sleep 5
+            done
+            echo "Preview GET / -> $code"
+            [ "$code" = "200" ]
