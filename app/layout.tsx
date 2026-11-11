@@ -11,9 +11,9 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const SITE_TITLE = 'AURE AGENCY — Маркетинг загородной недвижимости'
+const SITE_TITLE = 'AURE — студия архитектуры и дизайна интерьера'
 const SITE_DESCRIPTION =
-  'AURE AGENCY — маркетинг и digital-рост для коттеджных посёлков, девелоперов и строительных компаний. Превращаем маркетинг в продажи.'
+  'AURE — студия архитектуры и дизайна интерьера в Москве. Частные дома, квартиры, отели и рестораны: тихие пространства из натуральных материалов.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aureagency.ru'),
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   // their own title/description still share this brand image and site name.
   openGraph: {
     type: 'website',
-    siteName: 'AURE AGENCY',
+    siteName: 'AURE',
     locale: 'ru_RU',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'AURE AGENCY — логотип на каменной стене' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'AURE — логотип на каменной стене' }],
   },
   twitter: {
     card: 'summary_large_image',
