@@ -24,7 +24,7 @@ export default function ContactPage() {
       <SiteHeader />
       <main className="font-primary">
         <PageIntro>
-          Расскажите о своём проекте — площадь, место и сроки. Мы ответим в течение рабочего дня.
+          Расскажите о своём проекте - площадь, место и сроки. Мы ответим в течение рабочего дня.
         </PageIntro>
 
         <section className="mx-auto max-w-[1600px] px-5 pt-16 md:px-10 md:pt-28">
