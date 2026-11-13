@@ -58,7 +58,7 @@ export default function ServicesPage() {
           <ul className="mt-10 border-t border-border">
             {SERVICES.map(([t, d]) => (
               <li key={t} className="grid gap-2 border-b border-border py-6 md:grid-cols-12 md:gap-8 md:py-8">
-                <span className="text-[24px] font-light tracking-[-0.02em] md:col-span-5 md:text-[32px]">{t}</span>
+                <span className="text-[21px] font-light tracking-[-0.02em] md:col-span-5 md:text-[32px]">{t}</span>
                 <span className="text-[15px] leading-relaxed text-muted-foreground md:col-span-5 md:col-start-8 md:self-center">
                   {d}
                 </span>
@@ -82,7 +82,7 @@ export default function ServicesPage() {
         <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
           <Link href="/contact" className="group block border-t border-border pt-8">
             <span className="text-[13px] text-muted-foreground">Есть проект?</span>
-            <span className="mt-3 block text-[32px] font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 md:text-[56px]">
+            <span className="mt-3 block text-[28px] font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 md:text-[56px]">
               Напишите нам →
             </span>
           </Link>
