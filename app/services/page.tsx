@@ -34,7 +34,6 @@ export default function ServicesPage() {
       <SiteHeader />
       <main className="font-primary">
         <PageIntro
-          label="Услуги"
           // две строки от планшета и шире; на телефоне три (для двух нужно ~15px — мельче основного текста)
           titleClassName="text-[21px] leading-[1.25] md:text-[30px] md:leading-[1.2] lg:text-[36px] xl:text-[44px] xl:leading-[1.15]"
         >
