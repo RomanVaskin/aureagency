@@ -8,13 +8,12 @@
  * на сайте без правок кода. Все промпты собраны в docs/image-prompts.md.
  */
 
-export type Category = 'houses' | 'apartments' | 'hospitality' | 'commercial'
+export type Category = 'commercial' | 'houses' | 'apartments'
 
 export const CATEGORIES: { id: Category; label: string }[] = [
+  { id: 'commercial', label: 'Коммерческие помещения' },
   { id: 'houses', label: 'Частные дома' },
   { id: 'apartments', label: 'Квартиры' },
-  { id: 'hospitality', label: 'Гостеприимство' },
-  { id: 'commercial', label: 'Коммерческие' },
 ]
 
 export function categoryLabel(id: Category) {
@@ -99,7 +98,7 @@ export const PROJECTS: Project[] = [
   {
     slug: 'otel-tishina',
     title: 'Бутик-отель «Тишина»',
-    category: 'hospitality',
+    category: 'commercial',
     location: 'Светлогорск, Калининградская область',
     year: 2025,
     area: '24 номера',
@@ -133,7 +132,7 @@ export const PROJECTS: Project[] = [
   {
     slug: 'restoran-sever',
     title: 'Ресторан «Север»',
-    category: 'hospitality',
+    category: 'commercial',
     location: 'Санкт-Петербург',
     year: 2024,
     area: '260 м²',
@@ -184,7 +183,7 @@ export const PROJECTS: Project[] = [
   {
     slug: 'spa-krasnaya-polyana',
     title: 'Спа «Красная Поляна»',
-    category: 'hospitality',
+    category: 'commercial',
     location: 'Сочи, Красная Поляна',
     year: 2025,
     area: '600 м²',

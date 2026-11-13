@@ -8,7 +8,7 @@ import { CATEGORIES, PROJECTS } from '@/lib/projects'
 
 export const metadata: Metadata = {
   title: 'Проекты — AURE',
-  description: 'Частные дома, квартиры, отели, рестораны и коммерческие интерьеры студии AURE.',
+  description: 'Коммерческие помещения, частные дома и квартиры — проекты студии AURE.',
   alternates: { canonical: '/projects' },
 }
 
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
     <>
       <SiteHeader />
       <main className="font-primary">
-        <PageIntro label="Проекты">Дома, квартиры и общественные пространства, спроектированные с вниманием к свету и материалу.</PageIntro>
+        <PageIntro label="Проекты">Коммерческие помещения, частные дома и квартиры, спроектированные с вниманием к свету и материалу.</PageIntro>
         <section className="mx-auto max-w-[1600px] px-5 pt-16 md:px-10 md:pt-24">
           <ProjectsFilter categories={categories} items={items} />
         </section>

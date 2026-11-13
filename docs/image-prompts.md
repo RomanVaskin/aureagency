@@ -89,7 +89,7 @@ quiet bedroom with high ceiling and cornice, upholstered linen headboard, readin
 ```
 
 ## Бутик-отель «Тишина»
-Гостеприимство · Светлогорск, Калининградская область · 2025
+Коммерческие помещения · Светлогорск, Калининградская область · 2025
 
 ### Обложка — Номер с креслом у окна и видом на море
 Файл: `public/images/projects/otel-tishina/01.jpg` · 4/5
@@ -143,7 +143,7 @@ built-in oak library shelves under a mezzanine, reading chair, warm lamp light, 
 ```
 
 ## Ресторан «Север»
-Гостеприимство · Санкт-Петербург · 2024
+Коммерческие помещения · Санкт-Петербург · 2024
 
 ### Обложка — Зал ресторана с открытой кухней
 Файл: `public/images/projects/restoran-sever/01.jpg` · 3/2
@@ -197,7 +197,7 @@ all-wood bedroom in a lake house, linen bedding, handmade ceramic lamp, small sq
 ```
 
 ## Шоурум «Глина»
-Коммерческие · Москва · 2023
+Коммерческие помещения · Москва · 2023
 
 ### Обложка — Шоурум керамики с постаментами из штукатурки
 Файл: `public/images/projects/shourum-glina/01.jpg` · 3/2
@@ -224,7 +224,7 @@ oak and stainless steel shelving with rows of handmade ceramic cups and plates, 
 ```
 
 ## Спа «Красная Поляна»
-Гостеприимство · Сочи, Красная Поляна · 2025
+Коммерческие помещения · Сочи, Красная Поляна · 2025
 
 ### Обложка — Бассейн с видом на горный хребет
 Файл: `public/images/projects/spa-krasnaya-polyana/01.jpg` · 3/2
@@ -251,7 +251,7 @@ sauna with thermo-pine benches and a panoramic window to snowy mountains, soft m
 ```
 
 ## Офис «Линия»
-Коммерческие · Москва · 2023
+Коммерческие помещения · Москва · 2023
 
 ### Обложка — Кухня офиса с общим столом
 Файл: `public/images/projects/ofis-liniya/01.jpg` · 3/2
