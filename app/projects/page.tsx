@@ -24,7 +24,7 @@ export default function ProjectsPage() {
     <>
       <SiteHeader />
       <main className="font-primary">
-        <PageIntro label="Проекты">Коммерческие помещения, частные дома и квартиры, спроектированные с вниманием к свету и материалу.</PageIntro>
+        <PageIntro label="Проекты">Создаём пространства, в которых эстетика встречается с функциональностью, а архитектура становится продолжением образа жизни.</PageIntro>
         <section className="mx-auto max-w-[1600px] px-5 pt-16 md:px-10 md:pt-24">
           <ProjectsFilter categories={categories} items={items} />
         </section>
