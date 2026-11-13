@@ -5,22 +5,12 @@ type Item = { label: string; href: string; ext?: boolean }
 
 const COLUMNS: { title: string; items: Item[] }[] = [
   {
-    title: 'Работы',
+    title: 'Разделы',
     items: [
-      { label: 'Архитектура', href: '/projects?category=houses' },
-      { label: 'Интерьеры', href: '/projects?category=apartments' },
-      { label: 'Креатив', href: '/creative' },
-      { label: 'Видео', href: '/videos' },
-    ],
-  },
-  {
-    title: 'Студия',
-    items: [
-      { label: 'О студии', href: '/studio' },
-      { label: 'Команда', href: '/studio' },
-      { label: 'Рассылка', href: '/contact' },
+      { label: 'Главная', href: '/' },
+      { label: 'Проекты', href: '/projects' },
+      { label: 'Услуги', href: '/services' },
       { label: 'Контакты', href: '/contact' },
-      { label: 'Пресса', href: '/press' },
     ],
   },
   {
@@ -41,7 +31,7 @@ export function SiteFooter() {
         <div>
           <Logo height={17} />
         </div>
-        <div className="grid grid-cols-2 gap-y-12 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-y-12 sm:grid-cols-2">
           {COLUMNS.map((col) => (
             <div key={col.title}>
               <h2 className="text-[13px] font-medium uppercase tracking-[0.22em]">{col.title}</h2>

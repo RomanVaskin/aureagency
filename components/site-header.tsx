@@ -5,12 +5,10 @@ import { usePathname } from 'next/navigation'
 import { Logo } from './logo'
 
 export const NAV = [
-  { label: 'Архитектура', href: '/projects?category=houses' },
-  { label: 'Интерьеры', href: '/projects?category=apartments' },
-  { label: 'Креатив', href: '/creative' },
-  { label: 'Видео', href: '/videos' },
-  { label: 'Студия', href: '/studio' },
-  { label: 'Пресса', href: '/press' },
+  { label: 'Главная', href: '/' },
+  { label: 'Проекты', href: '/projects' },
+  { label: 'Услуги', href: '/services' },
+  { label: 'Контакты', href: '/contact' },
 ]
 
 /**
@@ -71,7 +69,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
           <Logo height={15} light={light} />
         </a>
 
-        <nav aria-label="Основное меню" className="absolute inset-x-0 hidden justify-center gap-[2.3vw] lg:flex">
+        <nav aria-label="Основное меню" className="absolute inset-x-0 hidden justify-center gap-[3.5vw] lg:flex">
           {NAV.map((item) => (
             <a
               key={item.label}

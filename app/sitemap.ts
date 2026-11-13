@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly' as const,
       priority: 0.7,
     })),
-    { url: `${BASE_URL}/studio`, lastModified: now, changeFrequency: 'yearly', priority: 0.7 },
+    { url: `${BASE_URL}/services`, lastModified: now, changeFrequency: 'yearly', priority: 0.7 },
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.6 },
   ]
 }

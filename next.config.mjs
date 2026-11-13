@@ -12,9 +12,9 @@ const nextConfig = {
   // Разделы прежнего сайта агентства ведут на новые страницы.
   async redirects() {
     return [
-      { source: '/services', destination: '/studio', permanent: true },
-      { source: '/process', destination: '/studio', permanent: true },
-      { source: '/system', destination: '/studio', permanent: true },
+      { source: '/studio', destination: '/services', permanent: true },
+      { source: '/process', destination: '/services', permanent: true },
+      { source: '/system', destination: '/services', permanent: true },
     ]
   },
 }

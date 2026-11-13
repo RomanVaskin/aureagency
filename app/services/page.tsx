@@ -8,9 +8,9 @@ import { Reveal } from '@/components/reveal'
 import { SITE_IMAGES } from '@/lib/projects'
 
 export const metadata: Metadata = {
-  title: 'Студия — AURE',
+  title: 'Услуги — AURE',
   description: 'AURE — студия архитектуры и дизайна интерьера в Москве. Подход, услуги и этапы работы.',
-  alternates: { canonical: '/studio' },
+  alternates: { canonical: '/services' },
 }
 
 const SERVICES = [
@@ -28,12 +28,12 @@ const STEPS = [
   ['04', 'Реализация', 'Комплектация и авторский надзор до момента, когда можно заезжать.'],
 ]
 
-export default function StudioPage() {
+export default function ServicesPage() {
   return (
     <>
       <SiteHeader />
       <main className="font-primary">
-        <PageIntro label="Студия">
+        <PageIntro label="Услуги">
           Мы верим, что хороший интерьер не кричит. Он спокоен, удобен и с годами становится только лучше.
         </PageIntro>
 
