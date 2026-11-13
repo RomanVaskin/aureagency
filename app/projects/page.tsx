@@ -21,7 +21,7 @@ export default function ProjectsPage() {
   }))
 
   return (
-    <>
+    <div className="type-manrope">
       <SiteHeader />
       <main className="font-primary">
         <PageIntro label="Проекты">Создаём пространства, в которых эстетика встречается с функциональностью, а архитектура становится продолжением образа жизни.</PageIntro>
@@ -30,6 +30,6 @@ export default function ProjectsPage() {
         </section>
       </main>
       <SiteFooter />
-    </>
+    </div>
   )
 }

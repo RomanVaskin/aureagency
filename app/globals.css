@@ -177,6 +177,34 @@
 }
 
 @layer utilities {
+  /* Типографика Manrope (страница «Проекты»): сдержанный редакционный гротеск
+     вместо геометричного Jost. Меняются только шрифт, насыщенность и разрядка —
+     размеры, отступы и раскладка остаются как были.
+     Заголовки 300, текст 400, навигация 500. */
+  .type-manrope,
+  .type-manrope .font-primary,
+  .type-manrope .font-sans,
+  .type-manrope .font-serif {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 400;
+    font-feature-settings: 'kern' 1;
+    text-rendering: optimizeLegibility;
+  }
+  .type-manrope h1 {
+    font-weight: 300;
+    letter-spacing: -0.025em;
+  }
+  .type-manrope header nav a {
+    font-weight: 500;
+  }
+  /* Мобильное меню было набрано широким серифом; гротеску хватает меньшей разрядки */
+  .type-manrope header nav[aria-label='Мобильное меню'] a {
+    letter-spacing: 0.2em;
+  }
+  .type-manrope footer h2 {
+    font-weight: 500;
+  }
+
   /* Restrained AURE AGENCY gradient accent — a subtle graphite sweep, used sparingly */
   .aure-gradient {
     background-image: linear-gradient(
