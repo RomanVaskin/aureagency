@@ -1,11 +1,7 @@
 /**
- * Контакты студии. Пустое значение — ссылка/строка просто не показывается.
- * Формат: WhatsApp — 'https://wa.me/79XXXXXXXXX', Telegram — 'https://t.me/username'.
+ * Messenger links for the Контакты page. An empty value leaves its button inactive —
+ * it still renders, just without a link.
+ * Format: WhatsApp — 'https://wa.me/79XXXXXXXXX', Telegram — 'https://t.me/username'.
  */
 export const WHATSAPP_URL = 'https://wa.me/79998248195'
 export const TELEGRAM_URL = 'https://t.me/Srmmarketing'
-export const PHONE = '+7 999 824-81-95'
-export const PHONE_HREF = 'tel:+79998248195'
-/** Добавьте почту студии, например 'studio@aureagency.ru' */
-export const EMAIL = ''
-export const CITY = 'Москва'

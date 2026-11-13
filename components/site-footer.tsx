@@ -1,68 +1,46 @@
 import { Logo } from './logo'
-import { PHONE, PHONE_HREF, TELEGRAM_URL, WHATSAPP_URL } from '@/lib/contacts'
+import { PROJECTS_ENABLED } from '@/lib/sections'
 
-type Item = { label: string; href: string; ext?: boolean }
-
-const COLUMNS: { title: string; items: Item[] }[] = [
-  {
-    title: 'Работы',
-    items: [
-      { label: 'Архитектура', href: '/projects?category=houses' },
-      { label: 'Интерьеры', href: '/projects?category=apartments' },
-      { label: 'Креатив', href: '/creative' },
-      { label: 'Видео', href: '/videos' },
-    ],
-  },
-  {
-    title: 'Студия',
-    items: [
-      { label: 'О студии', href: '/studio' },
-      { label: 'Команда', href: '/studio' },
-      { label: 'Рассылка', href: '/contact' },
-      { label: 'Контакты', href: '/contact' },
-      { label: 'Пресса', href: '/press' },
-    ],
-  },
-  {
-    title: 'Мы в сети',
-    items: [
-      ...(TELEGRAM_URL ? [{ label: 'Telegram', href: TELEGRAM_URL, ext: true }] : []),
-      ...(WHATSAPP_URL ? [{ label: 'WhatsApp', href: WHATSAPP_URL, ext: true }] : []),
-      { label: PHONE, href: PHONE_HREF },
-    ],
-  },
-]
-
-/** Подвал как в образце: логотип слева, три колонки ссылок справа, копирайт внизу. */
 export function SiteFooter() {
   return (
-    <footer className="px-5 pb-6 pt-28 md:px-[5vw] md:pt-44">
-      <div className="grid gap-14 md:grid-cols-[1fr_1fr] md:gap-8">
-        <div>
-          <Logo height={17} />
+    <footer className="border-t border-border">
+      <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-10 md:py-20">
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr]">
+          <div>
+            <Logo height={22} />
+            <p className="mt-6 text-sm text-muted-foreground">Маркетинг загородной недвижимости</p>
+            <p className="mt-1 font-mono text-sm text-foreground">aureagency.ru</p>
+          </div>
+
+          <nav className="grid grid-cols-2 gap-x-6 gap-y-3 md:justify-end md:text-right">
+            <a href="/#services" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              Услуги
+            </a>
+            {PROJECTS_ENABLED && (
+              <a href="/projects" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                Проекты
+              </a>
+            )}
+            <a href="/contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              Контакты
+            </a>
+            <a
+              href="https://aureagency.ru"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              aureagency.ru
+            </a>
+          </nav>
         </div>
-        <div className="grid grid-cols-2 gap-y-12 sm:grid-cols-3">
-          {COLUMNS.map((col) => (
-            <div key={col.title}>
-              <h2 className="text-[13px] font-medium uppercase tracking-[0.22em]">{col.title}</h2>
-              <ul className="mt-8 space-y-[14px] text-[15px] tracking-[0.03em] text-muted-foreground">
-                {col.items.map((it) => (
-                  <li key={it.label}>
-                    <a
-                      href={it.href}
-                      {...(it.ext ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                      className="transition-colors hover:text-foreground"
-                    >
-                      {it.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+
+        <div className="mt-16 flex flex-col gap-2 border-t border-border pt-6 font-mono text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2026 AURE AGENCY</span>
+          <span>Real Estate Marketing</span>
+          <span>deploy reg test</span>
         </div>
       </div>
-      <p className="mt-24 text-[14px] tracking-[0.03em] text-muted-foreground md:mt-40">© {new Date().getFullYear()} AURE</p>
     </footer>
   )
 }
