@@ -5,6 +5,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { PageIntro } from '@/components/page-intro'
 import { ProjectImage } from '@/components/project-image'
 import { Reveal } from '@/components/reveal'
+import { ProcessTimeline } from '@/components/process-timeline'
 import { SITE_IMAGES } from '@/lib/projects'
 
 export const metadata: Metadata = {
@@ -66,27 +67,17 @@ export default function ServicesPage() {
           </ul>
         </section>
 
-        <section className="mx-auto grid max-w-[1600px] gap-12 px-5 pt-28 md:grid-cols-12 md:gap-8 md:px-10 md:pt-48">
-          <div className="md:col-span-6">
-            <h2 className="text-[13px] text-muted-foreground">Как мы работаем</h2>
-            <ol className="mt-10 space-y-10">
-              {STEPS.map(([n, t, d], i) => (
-                <Reveal key={n} index={i}>
-                  <li className="grid grid-cols-[48px_1fr] gap-4">
-                    <span className="text-[13px] text-muted-foreground">{n}</span>
-                    <div>
-                      <h3 className="text-[22px] font-light tracking-[-0.01em]">{t}</h3>
-                      <p className="mt-2 max-w-[440px] text-[15px] leading-relaxed text-muted-foreground">{d}</p>
-                    </div>
-                  </li>
-                </Reveal>
-              ))}
-            </ol>
-          </div>
-          <Reveal className="md:col-span-5 md:col-start-8" index={1}>
-            <ProjectImage {...SITE_IMAGES.materials} tone={2} variant={1} />
-          </Reveal>
-        </section>
+        <ProcessTimeline
+          label="Как мы работаем"
+          heading={
+            <>
+              От первой встречи
+              <br />
+              до готового интерьера
+            </>
+          }
+          steps={STEPS.map(([, title, text]) => ({ title, text }))}
+        />
 
         <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
           <Link href="/contact" className="group block border-t border-border pt-8">
