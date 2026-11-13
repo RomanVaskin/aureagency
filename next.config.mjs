@@ -9,14 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Разделы прежнего сайта агентства ведут на новые страницы.
-  async redirects() {
-    return [
-      { source: '/services', destination: '/studio', permanent: true },
-      { source: '/process', destination: '/studio', permanent: true },
-      { source: '/system', destination: '/studio', permanent: true },
-    ]
-  },
 }
 
 export default nextConfig

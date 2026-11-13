@@ -1,27 +1,33 @@
-# AURE — студия архитектуры и интерьера
+# olnoomarketing
 
-Сайт на Next.js. Запуск: `pnpm install && pnpm dev` → http://localhost:3000
+This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
 
-## Где что лежит
+## Built with v0
 
-- `lib/projects.ts` — все проекты портфолио: тексты, факты, материалы, кадры и промпты к ним.
-- `lib/contacts.ts` — телефон, Telegram, WhatsApp, почта.
-- `app/` — страницы: главная, `/projects`, `/projects/[slug]`, `/studio`, `/contact`.
-- `docs/image-prompts.md` — промпты для генерации всех фотографий и пути, куда класть файлы.
+This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
 
-## Фотографии
+[Continue working on v0 →](https://v0.app/chat/projects/prj_kyrKOB6AGa4dDseveLtDQf1BalFQ)
 
-Пока файла нет, на его месте показывается заглушка в тон сайта. Положите JPG по пути из
-`docs/image-prompts.md` (например `public/images/projects/dom-u-sosen/01.jpg`) — после сборки
-фото появится само.
+## Getting Started
 
-После правок в `lib/projects.ts` обновите список промптов:
+First, run the development server:
 
 ```bash
-node --experimental-strip-types scripts/image-prompts.ts > docs/image-prompts.md
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-## Деплой
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Каждый pull request в `main` собирается и выкладывается на preview.aureagency.ru
-(`.github/workflows/preview.yml`).
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+## Learn More
+
+To learn more, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
