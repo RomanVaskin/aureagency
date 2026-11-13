@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
-import { PageIntro } from '@/components/page-intro'
+import { HEADING_SIZE, PageIntro } from '@/components/page-intro'
 import { ProjectImage } from '@/components/project-image'
 import { Reveal } from '@/components/reveal'
 import { ProcessTimeline } from '@/components/process-timeline'
@@ -82,7 +82,7 @@ export default function ServicesPage() {
         <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
           <Link href="/contact" className="group block border-t border-border pt-8">
             <span className="text-[13px] text-muted-foreground">Есть проект?</span>
-            <span className="mt-3 block text-[28px] font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 md:text-[56px]">
+            <span className={`mt-3 block font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 ${HEADING_SIZE}`}>
               Напишите нам →
             </span>
           </Link>

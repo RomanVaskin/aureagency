@@ -1,11 +1,14 @@
 import type { ReactNode } from 'react'
 
+/** Единый размер крупных заголовков страниц: телефон 21px → компьютер 44px */
+export const HEADING_SIZE = 'text-[21px] leading-[1.25] md:text-[30px] md:leading-[1.2] lg:text-[36px] xl:text-[44px] xl:leading-[1.15]'
+
 /** Начало внутренней страницы: маленькая подпись и крупная лёгкая фраза. */
 export function PageIntro({
   label,
   children,
   // общий размер для «Проектов», «Услуг» и «Контактов»
-  titleClassName = 'text-[21px] leading-[1.25] md:text-[30px] md:leading-[1.2] lg:text-[36px] xl:text-[44px] xl:leading-[1.15]',
+  titleClassName = HEADING_SIZE,
 }: {
   /** Маленькая подпись над заголовком; без неё заголовок стоит сразу под шапкой */
   label?: string

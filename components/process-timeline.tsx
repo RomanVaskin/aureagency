@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { InView } from './in-view'
 import { Reveal } from './reveal'
+import { HEADING_SIZE } from './page-intro'
 
 /**
  * Этапы работы линией, как на aureagency.ru/process. Когда линия попадает на экран,
@@ -23,7 +24,7 @@ export function ProcessTimeline({
     <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
       <Reveal>
         <h2 className="text-[13px] text-muted-foreground">{label}</h2>
-        <p className="mt-6 max-w-[1100px] text-[26px] font-light leading-[1.2] tracking-[-0.02em] md:text-[52px] md:leading-[1.15]">
+        <p className={`mt-6 font-light tracking-[-0.02em] ${HEADING_SIZE}`}>
           {heading}
         </p>
       </Reveal>
