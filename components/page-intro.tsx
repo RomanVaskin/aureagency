@@ -4,7 +4,8 @@ import type { ReactNode } from 'react'
 export function PageIntro({
   label,
   children,
-  titleClassName = 'max-w-[1100px] text-[26px] leading-[1.2] md:text-[52px] md:leading-[1.15]',
+  // общий размер для «Проектов», «Услуг» и «Контактов»
+  titleClassName = 'text-[21px] leading-[1.25] md:text-[30px] md:leading-[1.2] lg:text-[36px] xl:text-[44px] xl:leading-[1.15]',
 }: {
   /** Маленькая подпись над заголовком; без неё заголовок стоит сразу под шапкой */
   label?: string

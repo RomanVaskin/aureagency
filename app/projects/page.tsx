@@ -24,8 +24,7 @@ export default function ProjectsPage() {
     <>
       <SiteHeader />
       <main className="font-primary">
-        {/* Как на «Услугах»: без подписи, фраза — заголовок, две строки от планшета */}
-        <PageIntro titleClassName="text-[21px] leading-[1.25] md:text-[30px] md:leading-[1.2] lg:text-[36px] xl:text-[44px] xl:leading-[1.15]">
+        <PageIntro>
           Создаём пространства, в которых эстетика встречается с функциональностью, а архитектура становится
           продолжением образа жизни.
         </PageIntro>
