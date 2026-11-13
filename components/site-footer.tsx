@@ -24,12 +24,12 @@ const COLUMNS: { title: string; items: Item[] }[] = [
 ]
 
 /** Подвал как в образце: логотип слева, три колонки ссылок справа, копирайт внизу. */
-export function SiteFooter() {
+export function SiteFooter({ wordmark = false }: { wordmark?: boolean }) {
   return (
     <footer className="px-5 pb-6 pt-28 md:px-[5vw] md:pt-44">
       <div className="grid gap-14 md:grid-cols-[1fr_1fr] md:gap-8">
         <div>
-          <Logo height={17} />
+          {wordmark ? <span className="tp-logo">AURE</span> : <Logo height={17} />}
         </div>
         <div className="grid grid-cols-2 gap-y-12 sm:grid-cols-2">
           {COLUMNS.map((col) => (

@@ -17,8 +17,9 @@ export const NAV = [
  * тёмная на кремовом фоне. При прокрутке вниз прячется, при прокрутке вверх
  * появляется снова — уже на кремовой подложке, если под ней не фото.
  * overlay — страница начинается с полноэкранного кадра (главная).
+ * wordmark — логотип надписью (шрифт и размер задаёт .tp-logo), а не картинкой.
  */
-export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
+export function SiteHeader({ overlay = false, wordmark = false }: { overlay?: boolean; wordmark?: boolean }) {
   const pathname = usePathname()
   const [onImage, setOnImage] = useState(overlay)
   const [hidden, setHidden] = useState(false)
@@ -66,7 +67,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
     >
       <div className="relative flex h-[72px] items-center justify-between px-5 md:h-[110px] md:px-[2.7vw]">
         <a href="/" aria-label="AURE — на главную" className="relative z-10">
-          <Logo height={15} light={light} />
+          {wordmark ? <span className="tp-logo">AURE</span> : <Logo height={15} light={light} />}
         </a>
 
         <nav aria-label="Основное меню" className="absolute inset-x-0 hidden justify-center gap-[3.5vw] lg:flex">

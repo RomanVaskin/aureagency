@@ -1,13 +1,13 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Geist_Mono, Jost, Manrope } from 'next/font/google'
+import { Cormorant_Garamond, Geist_Mono, Inter, Jost } from 'next/font/google'
 import './globals.css'
 
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 /** Тексты, меню, подписи */
 const jost = Jost({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500'], variable: '--font-jost' })
-/** Страница «Проекты» (класс .type-manrope в globals.css) */
-const manrope = Manrope({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500'], variable: '--font-manrope' })
+/** Страница «Проекты» (класс .type-projects в globals.css) */
+const inter = Inter({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500'], variable: '--font-inter' })
 /** Заголовки проектов и разделов: серифные капслоком с широкой разрядкой */
 const cormorant = Cormorant_Garamond({
   subsets: ['latin', 'cyrillic'],
@@ -53,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ru" className={`light bg-background ${geistMono.variable} ${jost.variable} ${cormorant.variable} ${manrope.variable}`}>
+    <html lang="ru" className={`light bg-background ${geistMono.variable} ${jost.variable} ${cormorant.variable} ${inter.variable}`}>
       <body className="antialiased font-sans">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
