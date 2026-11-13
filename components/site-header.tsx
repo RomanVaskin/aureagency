@@ -104,7 +104,7 @@ export function SiteHeader({ overlay = false, wordmark = false }: { overlay?: bo
       {open && (
         <nav aria-label="Мобильное меню" className="h-[calc(100dvh-72px)] bg-background px-5 pt-8 lg:hidden">
           {NAV.map((item) => (
-            <a key={item.label} href={item.href} className="block py-3 font-serif text-[22px] uppercase tracking-[0.35em]">
+            <a key={item.label} href={item.href} className="mobile-menu-link block py-3 text-[22px] font-light uppercase tracking-[0.5px]">
               {item.label}
             </a>
           ))}
