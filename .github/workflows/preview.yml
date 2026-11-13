@@ -8,6 +8,12 @@ on:
       - preview
   workflow_dispatch:
 
+# Один деплой за раз: новый push отменяет ещё идущий старый, чтобы старая сборка
+# не закончилась позже и не перезаписала свежую.
+concurrency:
+  group: preview-deploy
+  cancel-in-progress: true
+
 jobs:
   preview:
     runs-on: ubuntu-latest

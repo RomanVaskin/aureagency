@@ -31,7 +31,7 @@ export default function ContactPage() {
           <dl className="border-t border-border">
             {rows.map((r) => (
               <div key={r.k} className="grid gap-1 border-b border-border py-6 md:grid-cols-12 md:gap-8 md:py-8">
-                <dt className="text-[13px] text-muted-foreground md:col-span-3 md:self-center">{r.k}</dt>
+                <dt className="text-[15px] text-muted-foreground md:col-span-3 md:self-center">{r.k}</dt>
                 <dd className="text-[21px] font-light tracking-[-0.02em] md:col-span-9 md:text-[32px]">
                   {r.href ? (
                     <a
