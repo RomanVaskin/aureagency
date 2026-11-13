@@ -44,7 +44,7 @@ export function ProjectsFilter({
 
   return (
     <>
-      <div className="tp-caption flex flex-wrap gap-x-7 gap-y-2 text-[13px] tracking-[0.02em]">
+      <div className="flex flex-wrap gap-x-7 gap-y-2 text-[13px] tracking-[0.02em]">
         {btn('all', 'Все', items.length)}
         {categories.map((c) => btn(c.id, c.label, c.count))}
       </div>

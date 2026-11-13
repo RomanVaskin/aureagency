@@ -6,7 +6,7 @@ import './globals.css'
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 /** Тексты, меню, подписи */
 const jost = Jost({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500'], variable: '--font-jost' })
-/** Страница «Проекты» (класс .type-projects в globals.css) */
+/** Пункты мобильного меню (.mobile-menu-link в globals.css) */
 const inter = Inter({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500'], variable: '--font-inter' })
 /** Заголовки проектов и разделов: серифные капслоком с широкой разрядкой */
 const cormorant = Cormorant_Garamond({
