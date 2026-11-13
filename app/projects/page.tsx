@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 }
 
 export default function ProjectsPage() {
-  const categories = CATEGORIES.map((c) => ({ ...c, count: PROJECTS.filter((p) => p.category === c.id).length }))
   const items = PROJECTS.map((p, i) => ({
     key: p.slug,
     category: p.category,
@@ -29,7 +28,7 @@ export default function ProjectsPage() {
           продолжением образа жизни.
         </PageIntro>
         <section className="mx-auto max-w-[1600px] px-5 pt-16 md:px-10 md:pt-24">
-          <ProjectsFilter categories={categories} items={items} />
+          <ProjectsFilter categories={CATEGORIES} items={items} />
         </section>
       </main>
       <SiteFooter />
