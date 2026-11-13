@@ -1,10 +1,11 @@
 name: Preview Deploy
 
+# preview.aureagency.ru показывает ветку `preview`: каждый push в неё выкладывается сюда.
+# Основной сайт (aureagency.ru) выкладывается из `main` — см. deploy.yml.
 on:
-  pull_request:
+  push:
     branches:
-      - main
-    types: [opened, synchronize, reopened]
+      - preview
   workflow_dispatch:
 
 jobs:
@@ -12,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout PR branch
+      - name: Checkout preview branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          ref: ${{ github.sha }}
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -60,7 +61,7 @@ jobs:
             cd /opt/olnoo/projects/aureagency-preview
 
             git fetch origin
-            git reset --hard "${{ github.event.pull_request.head.sha || github.sha }}"
+            git reset --hard "${{ github.sha }}"
 
             pnpm install --frozen-lockfile
 
