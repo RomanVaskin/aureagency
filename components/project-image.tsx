@@ -1,5 +1,4 @@
-import fs from 'node:fs'
-import path from 'node:path'
+import { findPhoto } from '@/lib/photo'
 import type { Ratio } from '@/lib/projects'
 
 /** Тона заглушек: тёплые нейтральные из палитры сайта (#F3F3F1 и темнее). */
@@ -13,11 +12,6 @@ const ASPECT: Record<Ratio, string> = {
   '1/1': 'aspect-square',
 }
 
-const exists = new Map<string, boolean>()
-function hasFile(src: string) {
-  if (!exists.has(src)) exists.set(src, fs.existsSync(path.join(process.cwd(), 'public', src)))
-  return exists.get(src)!
-}
 
 /**
  * Фото из public/ или, пока его нет, спокойная заглушка с линейным эскизом комнаты.
@@ -47,12 +41,13 @@ export function ProjectImage({
 }) {
   const box = `relative overflow-hidden ${fill ? 'h-full w-full' : ASPECT[ratio]} ${className}`
 
-  if (hasFile(src)) {
+  const photo = findPhoto(src)
+  if (photo) {
     return (
       <div className={box}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={photo}
           alt={alt}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"

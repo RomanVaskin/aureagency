@@ -1,15 +1,9 @@
-import fs from 'node:fs'
-import path from 'node:path'
+import { findPhoto } from '@/lib/photo'
 
 /** Тёплые тона заглушек: светлые для ленты, тёмные для полноэкранных кадров под белым текстом. */
 const LIGHT = ['#e3ddd1', '#d6cfc1', '#cbc3b4', '#ddd6c9']
 const DARK = ['#6f665b', '#5d554b', '#7b7266', '#4f4840']
 
-const cache = new Map<string, boolean>()
-function exists(src: string) {
-  if (!cache.has(src)) cache.set(src, fs.existsSync(path.join(process.cwd(), 'public', src)))
-  return cache.get(src)!
-}
 
 /** Фото, если файл уже лежит в public/, иначе однотонная заглушка. Заполняет родителя. */
 export function Media({
@@ -27,11 +21,12 @@ export function Media({
   priority?: boolean
   className?: string
 }) {
-  if (exists(src)) {
+  const photo = findPhoto(src)
+  if (photo) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
-        src={src}
+        src={photo}
         alt={alt}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
