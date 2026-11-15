@@ -9,12 +9,15 @@ export function PageIntro({
   children,
   // общий размер для «Проектов», «Услуг» и «Контактов»
   titleClassName = HEADING_SIZE,
+  action,
 }: {
   /** Маленькая подпись над заголовком; без неё заголовок стоит сразу под шапкой */
   label?: string
   children: ReactNode
   /** Размер и ширина заголовка, если странице нужен свой */
   titleClassName?: string
+  /** Что-то под заголовком, например кнопка */
+  action?: ReactNode
 }) {
   return (
     <section className="mx-auto max-w-[1600px] px-5 pt-32 md:px-10 md:pt-44">
@@ -22,6 +25,7 @@ export function PageIntro({
       <h1 className={`font-light tracking-[-0.02em] ${titleClassName}`}>
         {children}
       </h1>
+      {action && <div className="mt-8 md:mt-10">{action}</div>}
     </section>
   )
 }

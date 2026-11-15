@@ -34,7 +34,17 @@ export default function ServicesPage() {
       <SiteHeader />
       <main className="font-primary">
         {/* фраза набрана мелко, как основной текст страницы */}
-        <PageIntro titleClassName="max-w-[560px] text-[15px] leading-[1.6] tracking-normal md:text-[18px]">
+        <PageIntro
+          titleClassName="max-w-[560px] text-[15px] leading-[1.6] tracking-normal md:text-[18px]"
+          action={
+            <Link
+              href="/contact"
+              className="inline-block rounded-full bg-foreground px-7 py-3 text-[13px] tracking-[0.02em] text-background transition-opacity hover:opacity-80"
+            >
+              Обсудить проект
+            </Link>
+          }
+        >
           Мы верим, что хороший интерьер не кричит. Он спокоен, удобен и с годами становится только лучше.
         </PageIntro>
 
