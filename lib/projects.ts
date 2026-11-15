@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
     category: 'commercial',
     location: 'Ленинградская область',
     year: 2025,
-    area: '',
+    area: '320 м²',
     status: 'Реализован',
     summary: 'Ресторан из камня, ореха и тёплого скрытого света с видом на лес.',
     description: [
