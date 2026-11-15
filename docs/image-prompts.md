@@ -64,28 +64,40 @@ close-up of a monolithic pale limestone fireplace, stacked firewood, a ceramic v
 ## Квартира на Патриарших
 Квартиры · Москва · 2025
 
-### Обложка — Гостиная с лепниной и высокими окнами
-Файл: `public/photos/kvartira-na-patriarshih-01.jpg` · 4/5
+### Обложка — Гостиная с мягким диваном, креслами букле и панорамным окном в сад
+Файл: `public/photos/kvartira-na-patriarshih-01.jpg` · 16/9
 ```
-living room in a historic Moscow apartment with high ceilings, original cornice moulding, tall windows with sheer linen curtains, herringbone oak parquet, boucle armchair, travertine coffee table, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
-```
-
-### Анфилада комнат
-Файл: `public/photos/kvartira-na-patriarshih-02.jpg` · 3/2
-```
-enfilade of rooms seen through a series of tall double doors, herringbone oak parquet, warm white lime-painted walls, minimal furniture, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
+living room with a long boucle sofa, two round armchairs, low oak coffee table, linen curtains along the wall, panoramic window onto a garden, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 16:9
 ```
 
-### Кухонный остров из травертина
-Файл: `public/photos/kvartira-na-patriarshih-03.jpg` · 4/5
+### Зона для чтения: кресла букле у стеллажа из тёмного дуба
+Файл: `public/photos/kvartira-na-patriarshih-02.jpg` · 1/1
 ```
-minimal kitchen with a travertine island, handleless warm white cabinetry, slim brass pendant, tall window with daylight, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
+reading corner with two round boucle armchairs, dark oak shelving with books and ceramics, floor lamp, sheer curtains, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 1:1
 ```
 
-### Спальня с торшером и креслом у окна
+### Прихожая: каменный постамент с чашей и высокие дубовые двери
+Файл: `public/photos/kvartira-na-patriarshih-03.jpg` · 1/1
+```
+entrance with a textured stone plinth and bowl, tall dark oak doors, stone floor, linen curtains, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 1:1
+```
+
+### Столовая с длинным дубовым столом и кухонным островом из камня
 Файл: `public/photos/kvartira-na-patriarshih-04.jpg` · 3/2
 ```
-quiet bedroom with high ceiling and cornice, upholstered linen headboard, reading armchair by a tall window, floor lamp with paper shade, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
+dining area with a long dark oak table and chairs, paper pendant lamp, stone kitchen island in front of an oak wall, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
+```
+
+### Спальня с низкой кроватью, льняным бельём и пуфами
+Файл: `public/photos/kvartira-na-patriarshih-05.jpg` · 1/1
+```
+bedroom with a low platform bed, linen bedding, two round poufs, oak wall slats, plaster wall, tall window, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 1:1
+```
+
+### Деталь: каменная лампа и чаша на дубовой консоли
+Файл: `public/photos/kvartira-na-patriarshih-06.jpg` · 4/5
+```
+detail of a stone mushroom table lamp and a bowl on an oak console in front of linen curtains, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
 ```
 
 ## Бутик-отель «Тишина»

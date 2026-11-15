@@ -76,9 +76,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <section className="mx-auto grid max-w-[1600px] gap-6 px-5 pt-20 md:grid-cols-12 md:gap-8 md:px-10 md:pt-36">
           {gallery.map((im, i) => {
             // Широкие кадры — на всю ширину, вертикальные — со сдвигом то вправо, то к центру.
-            const portrait = gallery.slice(0, i).filter((g) => g.ratio === '4/5').length
+            const narrow = (r: string) => r === '4/5' || r === '1/1'
+            const portrait = gallery.slice(0, i).filter((g) => narrow(g.ratio)).length
             const cls =
-              im.ratio !== '4/5'
+              !narrow(im.ratio)
                 ? 'md:col-span-12'
                 : portrait % 2 === 0
                   ? 'md:col-span-6 md:col-start-4'

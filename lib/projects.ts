@@ -225,11 +225,14 @@ const SCENES: Record<string, [Ratio, string, string][]> = {
     ['4/5', 'Спальня с дубовыми панелями', 'bedroom with oak wall paneling, low bed with off-white linen bedding, wool throw, small window onto pine branches, soft morning light'],
     ['3/2', 'Камин из известняка в гостиной', 'close-up of a monolithic pale limestone fireplace, stacked firewood, a ceramic vase with dry branches, textured lime plaster wall'],
   ],
+  // Реальные фото проекта: public/photos/kvartira-na-patriarshih-01…06.jpg
   'kvartira-na-patriarshih': [
-    ['4/5', 'Гостиная с лепниной и высокими окнами', 'living room in a historic Moscow apartment with high ceilings, original cornice moulding, tall windows with sheer linen curtains, herringbone oak parquet, boucle armchair, travertine coffee table'],
-    ['3/2', 'Анфилада комнат', 'enfilade of rooms seen through a series of tall double doors, herringbone oak parquet, warm white lime-painted walls, minimal furniture'],
-    ['4/5', 'Кухонный остров из травертина', 'minimal kitchen with a travertine island, handleless warm white cabinetry, slim brass pendant, tall window with daylight'],
-    ['3/2', 'Спальня с торшером и креслом у окна', 'quiet bedroom with high ceiling and cornice, upholstered linen headboard, reading armchair by a tall window, floor lamp with paper shade'],
+    ['16/9', 'Гостиная с мягким диваном, креслами букле и панорамным окном в сад', 'living room with a long boucle sofa, two round armchairs, low oak coffee table, linen curtains along the wall, panoramic window onto a garden'],
+    ['1/1', 'Зона для чтения: кресла букле у стеллажа из тёмного дуба', 'reading corner with two round boucle armchairs, dark oak shelving with books and ceramics, floor lamp, sheer curtains'],
+    ['1/1', 'Прихожая: каменный постамент с чашей и высокие дубовые двери', 'entrance with a textured stone plinth and bowl, tall dark oak doors, stone floor, linen curtains'],
+    ['3/2', 'Столовая с длинным дубовым столом и кухонным островом из камня', 'dining area with a long dark oak table and chairs, paper pendant lamp, stone kitchen island in front of an oak wall'],
+    ['1/1', 'Спальня с низкой кроватью, льняным бельём и пуфами', 'bedroom with a low platform bed, linen bedding, two round poufs, oak wall slats, plaster wall, tall window'],
+    ['4/5', 'Деталь: каменная лампа и чаша на дубовой консоли', 'detail of a stone mushroom table lamp and a bowl on an oak console in front of linen curtains'],
   ],
   'otel-tishina': [
     ['4/5', 'Номер с креслом у окна и видом на море', 'boutique hotel room by the Baltic sea, lounge chair by a large window with a sea view, hand-applied plaster walls, ash wood bed frame, linen bedding, no television'],
