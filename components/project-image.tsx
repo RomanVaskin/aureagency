@@ -10,6 +10,7 @@ const ASPECT: Record<Ratio, string> = {
   '3/2': 'aspect-[3/2]',
   '16/9': 'aspect-[16/9]',
   '1/1': 'aspect-square',
+  '2/3': 'aspect-[2/3]',
 }
 
 

@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         <section className="mx-auto grid max-w-[1600px] gap-12 px-5 pt-16 md:grid-cols-12 md:gap-8 md:px-10 md:pt-28">
           <dl className="grid grid-cols-2 gap-x-6 gap-y-5 text-[13px] md:col-span-4 md:grid-cols-1">
-            {facts.map(([k, v]) => (
+            {facts.filter(([, v]) => v).map(([k, v]) => (
               <div key={k}>
                 <dt className="text-muted-foreground">{k}</dt>
                 <dd className="mt-1">{v}</dd>
@@ -76,7 +76,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <section className="mx-auto grid max-w-[1600px] gap-6 px-5 pt-20 md:grid-cols-12 md:gap-8 md:px-10 md:pt-36">
           {gallery.map((im, i) => {
             // Широкие кадры — на всю ширину, вертикальные — со сдвигом то вправо, то к центру.
-            const narrow = (r: string) => r === '4/5' || r === '1/1'
+            const narrow = (r: string) => r === '4/5' || r === '1/1' || r === '2/3'
             const portrait = gallery.slice(0, i).filter((g) => narrow(g.ratio)).length
             const cls =
               !narrow(im.ratio)

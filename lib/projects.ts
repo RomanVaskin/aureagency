@@ -20,7 +20,7 @@ export function categoryLabel(id: Category) {
   return CATEGORIES.find((c) => c.id === id)?.label ?? ''
 }
 
-export type Ratio = '4/5' | '3/2' | '16/9' | '1/1'
+export type Ratio = '4/5' | '3/2' | '16/9' | '1/1' | '2/3'
 
 export type ProjectImage = {
   /** Путь от public/, например /photos/dom-u-sosen-01.jpg (все фото — в одной папке public/photos) */
@@ -61,6 +61,23 @@ const img = (slug: string, n: number, ratio: Ratio, alt: string, scene: string):
 })
 
 export const PROJECTS: Project[] = [
+  {
+    slug: 'apartamenty-serbiya',
+    title: 'Апартаменты в Сербии',
+    category: 'apartments',
+    location: 'Сербия',
+    year: 2025,
+    area: '',
+    status: 'Реализован',
+    summary: 'Тёплый орех, зелёный мрамор и мягкие текстуры букле.',
+    description: [
+      'Апартаменты построены на сочетании тёмного ореха, светлой фактурной штукатурки и зелёного мрамора с золотистыми прожилками. Мрамор появляется точечно — в столешницах, журнальном столике и вертикальных вставках, — и связывает между собой все комнаты.',
+      'Гостиная и столовая открыты к панорамным окнам, мягкая мебель обита светлым букле и оливковым бархатом. В спальне и ванных та же палитра: изголовье из ткани, подсвеченные круглые зеркала, ванна из камня у окна в сад.',
+    ],
+    materials: ['Орех', 'Зелёный мрамор', 'Фактурная штукатурка', 'Букле', 'Бархат', 'Латунь'],
+    tone: 2,
+    images: [],
+  },
   {
     slug: 'dom-u-sosen',
     title: 'Дом у сосен',
@@ -224,6 +241,17 @@ const SCENES: Record<string, [Ratio, string, string][]> = {
     ['3/2', 'Кухня-столовая с выходом на террасу', 'open kitchen and dining area, long solid oak dining table with simple wooden chairs, sliding glass doors to a wooden terrace and pine forest, limewashed walls'],
     ['4/5', 'Спальня с дубовыми панелями', 'bedroom with oak wall paneling, low bed with off-white linen bedding, wool throw, small window onto pine branches, soft morning light'],
     ['3/2', 'Камин из известняка в гостиной', 'close-up of a monolithic pale limestone fireplace, stacked firewood, a ceramic vase with dry branches, textured lime plaster wall'],
+  ],
+  // Реальные фото проекта: public/photos/apartamenty-serbiya-01…08.jpg
+  'apartamenty-serbiya': [
+    ['16/9', 'Столовая: круглый ореховый стол, кресла из оливкового бархата и люстра-облако', 'dining room with a round walnut table, olive velvet chairs, cloud-shaped pendant, panoramic windows'],
+    ['1/1', 'Гостиная с диваном букле и мраморным журнальным столиком', 'living room with a boucle sofa, green marble coffee table, walnut shelving with lighting, woven pendant'],
+    ['4/5', 'Спальня: изголовье из ткани, вставки из зелёного мрамора', 'bedroom with an upholstered headboard, walnut and green marble wall, olive bedding, boucle bench'],
+    ['2/3', 'Деталь спальни: ореховая тумба и лампа у кровати', 'detail of a walnut bedside table with a lamp beside a boucle bed and a green marble panel'],
+    ['1/1', 'Ванная с каменной ванной у окна в сад', 'bathroom with a freestanding stone bathtub by a window to the garden, walnut vanity'],
+    ['4/5', 'Раковина на мраморной столешнице и круглое зеркало с подсветкой', 'washbasin on a green marble vanity with walnut drawers and a round backlit mirror'],
+    ['4/5', 'Вторая ванная: мрамор, орех и бронзовые бра', 'second bathroom with a green marble vanity, round backlit mirror and bronze wall lights'],
+    ['1/1', 'Туалетный столик из мрамора у круглого зеркала', 'green marble dressing table with a round mirror, boucle stool and a vase with branches'],
   ],
   // Реальные фото проекта: public/photos/kvartira-na-patriarshih-01…06.jpg
   'kvartira-na-patriarshih': [
