@@ -49,38 +49,44 @@ dining room with a round walnut table, olive velvet chairs, cloud-shaped pendant
 living room with a boucle sofa, green marble coffee table, walnut shelving with lighting, woven pendant, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 1:1
 ```
 
-### Спальня: изголовье из ткани, вставки из зелёного мрамора
+### Зона отдыха: кресло из оливкового бархата у подсвеченного стеллажа
 Файл: `public/photos/apartamenty-serbiya-03.jpg` · 4/5
+```
+lounge corner with an olive velvet armchair and pouf, backlit walnut shelving, olive tree in a stone pot, abstract stone-texture artwork, floor lamp, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
+```
+
+### Спальня: изголовье из ткани, вставки из зелёного мрамора
+Файл: `public/photos/apartamenty-serbiya-04.jpg` · 4/5
 ```
 bedroom with an upholstered headboard, walnut and green marble wall, olive bedding, boucle bench, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
 ```
 
 ### Деталь спальни: ореховая тумба и лампа у кровати
-Файл: `public/photos/apartamenty-serbiya-04.jpg` · 2/3
+Файл: `public/photos/apartamenty-serbiya-05.jpg` · 2/3
 ```
 detail of a walnut bedside table with a lamp beside a boucle bed and a green marble panel, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 2:3
 ```
 
 ### Ванная с каменной ванной у окна в сад
-Файл: `public/photos/apartamenty-serbiya-05.jpg` · 1/1
+Файл: `public/photos/apartamenty-serbiya-06.jpg` · 1/1
 ```
 bathroom with a freestanding stone bathtub by a window to the garden, walnut vanity, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 1:1
 ```
 
 ### Раковина на мраморной столешнице и круглое зеркало с подсветкой
-Файл: `public/photos/apartamenty-serbiya-06.jpg` · 4/5
+Файл: `public/photos/apartamenty-serbiya-07.jpg` · 4/5
 ```
 washbasin on a green marble vanity with walnut drawers and a round backlit mirror, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
 ```
 
 ### Вторая ванная: мрамор, орех и бронзовые бра
-Файл: `public/photos/apartamenty-serbiya-07.jpg` · 4/5
+Файл: `public/photos/apartamenty-serbiya-08.jpg` · 4/5
 ```
 second bathroom with a green marble vanity, round backlit mirror and bronze wall lights, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
 ```
 
 ### Туалетный столик из мрамора у круглого зеркала
-Файл: `public/photos/apartamenty-serbiya-08.jpg` · 1/1
+Файл: `public/photos/apartamenty-serbiya-09.jpg` · 1/1
 ```
 green marble dressing table with a round mirror, boucle stool and a vase with branches, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 1:1
 ```

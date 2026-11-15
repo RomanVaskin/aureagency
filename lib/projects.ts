@@ -242,10 +242,11 @@ const SCENES: Record<string, [Ratio, string, string][]> = {
     ['4/5', 'Спальня с дубовыми панелями', 'bedroom with oak wall paneling, low bed with off-white linen bedding, wool throw, small window onto pine branches, soft morning light'],
     ['3/2', 'Камин из известняка в гостиной', 'close-up of a monolithic pale limestone fireplace, stacked firewood, a ceramic vase with dry branches, textured lime plaster wall'],
   ],
-  // Реальные фото проекта: public/photos/apartamenty-serbiya-01…08.jpg
+  // Реальные фото проекта: public/photos/apartamenty-serbiya-01…09.jpg
   'apartamenty-serbiya': [
     ['16/9', 'Столовая: круглый ореховый стол, кресла из оливкового бархата и люстра-облако', 'dining room with a round walnut table, olive velvet chairs, cloud-shaped pendant, panoramic windows'],
     ['1/1', 'Гостиная с диваном букле и мраморным журнальным столиком', 'living room with a boucle sofa, green marble coffee table, walnut shelving with lighting, woven pendant'],
+    ['4/5', 'Зона отдыха: кресло из оливкового бархата у подсвеченного стеллажа', 'lounge corner with an olive velvet armchair and pouf, backlit walnut shelving, olive tree in a stone pot, abstract stone-texture artwork, floor lamp'],
     ['4/5', 'Спальня: изголовье из ткани, вставки из зелёного мрамора', 'bedroom with an upholstered headboard, walnut and green marble wall, olive bedding, boucle bench'],
     ['2/3', 'Деталь спальни: ореховая тумба и лампа у кровати', 'detail of a walnut bedside table with a lamp beside a boucle bed and a green marble panel'],
     ['1/1', 'Ванная с каменной ванной у окна в сад', 'bathroom with a freestanding stone bathtub by a window to the garden, walnut vanity'],
