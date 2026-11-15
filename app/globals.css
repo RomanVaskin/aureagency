@@ -177,6 +177,31 @@
 }
 
 @layer utilities {
+  /* Страница «Контакты»: фон в точности как у слайда на главной —
+     тон #6f665b (components/home/media.tsx, DARK[0]) и затемнение к низу
+     black/35 на нижней половине, как в hero-slider.tsx (#6f665b → #48423b). */
+  .page-dusk {
+    --dusk: #6f665b;
+    --dusk-bottom: #48423b;
+    --background: var(--dusk);
+    --foreground: #ffffff;
+    --card-foreground: #ffffff;
+    --muted-foreground: rgb(255 255 255 / 0.7);
+    --border: rgb(255 255 255 / 0.22);
+    min-height: 100svh;
+    color: #ffffff;
+    background-color: var(--dusk-bottom);
+    background-image: linear-gradient(180deg, var(--dusk) 0%, var(--dusk) 50%, var(--dusk-bottom) 100%);
+  }
+  .page-dusk ::selection {
+    background: #ffffff;
+    color: var(--dusk);
+  }
+  /* логотип в подвале — белый, как в шапке над фото */
+  .page-dusk footer img {
+    filter: brightness(0) invert(1);
+  }
+
   /* Пункты раскрытого мобильного меню — одинаково на всех страницах */
   .mobile-menu-link {
     font-family: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;

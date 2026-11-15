@@ -20,7 +20,8 @@ export default function ContactPage() {
   ].filter(Boolean) as { k: string; v: string; href?: string; ext?: boolean }[]
 
   return (
-    <>
+    // Фон как у первого слайда на главной; светлая шапка и текст (см. .page-dusk в globals.css)
+    <div className="page-dusk" data-header="light">
       <SiteHeader />
       <main className="font-primary">
         <PageIntro>
@@ -51,6 +52,6 @@ export default function ContactPage() {
         </section>
       </main>
       <SiteFooter />
-    </>
+    </div>
   )
 }
