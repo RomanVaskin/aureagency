@@ -1,7 +1,7 @@
 name: Preview Deploy
 
-# preview.aureagency.ru показывает ветку `preview`: каждый push в неё выкладывается сюда.
-# Основной сайт (aureagency.ru) выкладывается из `main` — см. deploy.yml.
+# preview.eosbureau.ru показывает ветку `preview`: каждый push в неё выкладывается сюда.
+# Основной сайт (eosbureau.ru) выкладывается из `main` — см. deploy.yml.
 on:
   push:
     branches:

@@ -33,7 +33,7 @@ jobs:
         run: |
           rm -rf .next-new
           NEXT_DIST_DIR=.next-new pnpm build
-          tar -czf olnoomarketing-build.tgz .next-new
+          tar -czf eosbureau-build.tgz .next-new
 
       - name: Upload build to production
         uses: appleboy/scp-action@v1
@@ -41,7 +41,7 @@ jobs:
           host: ${{ secrets.KZ_HOST }}
           username: ${{ secrets.KZ_USER }}
           key: ${{ secrets.KZ_SSH_KEY }}
-          source: olnoomarketing-build.tgz
+          source: eosbureau-build.tgz
           target: /tmp
 
       - name: Deploy to production
@@ -54,7 +54,7 @@ jobs:
           script: |
             set -e
 
-            cd /opt/olnoo/projects/olnoomarketing
+            cd /opt/olnoo/projects/eosbureau
 
             git fetch origin
             git reset --hard origin/main
@@ -63,20 +63,20 @@ jobs:
             pnpm install --frozen-lockfile
 
             rm -rf .next-new
-            tar -xzf /tmp/olnoomarketing-build.tgz -C .
+            tar -xzf /tmp/eosbureau-build.tgz -C .
 
             rm -rf .next-old
             if [ -d .next ]; then mv .next .next-old; fi
             mv .next-new .next
 
-            systemctl restart olnoomarketing
+            systemctl restart eosbureau
             rm -rf .next-old
-            rm -f /tmp/olnoomarketing-build.tgz
+            rm -f /tmp/eosbureau-build.tgz
 
       - name: Check site and static assets
         run: |
           set -e
-          site=https://aureagency.ru
+          site=https://eosbureau.ru
           for i in $(seq 1 12); do
             code=$(curl -s -o page.html -w '%{http_code}' "$site/" || true)
             [ "$code" = "200" ] && break
@@ -93,6 +93,6 @@ jobs:
             [ "$c" = "200" ] || fail=1
           done
           if [ "$fail" != "0" ]; then
-            echo "::error::Static assets are not served. Check the nginx config for /_next/ and the olnoomarketing service logs."
+            echo "::error::Static assets are not served. Check the nginx config for /_next/ and the eosbureau service logs."
             exit 1
           fi
