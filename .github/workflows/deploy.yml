@@ -76,7 +76,7 @@ jobs:
       - name: Check site and static assets
         run: |
           set -e
-          site=https://aureagency.ru
+          site=https://eosbureau.ru
           for i in $(seq 1 12); do
             code=$(curl -s -o page.html -w '%{http_code}' "$site/" || true)
             [ "$code" = "200" ] && break
