@@ -23,7 +23,7 @@ export function categoryLabel(id: Category) {
 export type Ratio = '4/5' | '3/2' | '16/9' | '1/1' | '2/3'
 
 export type ProjectImage = {
-  /** Путь от public/, например /photos/dom-u-sosen-01.jpg (все фото — в одной папке public/photos) */
+  /** Путь от public/, например /photos/kvartira-na-patriarshih-01.jpg (все фото — в одной папке public/photos) */
   src: string
   alt: string
   ratio: Ratio
@@ -79,20 +79,20 @@ export const PROJECTS: Project[] = [
     images: [],
   },
   {
-    slug: 'dom-u-sosen',
-    title: 'Дом у сосен',
-    category: 'houses',
-    location: 'Истра, Московская область',
+    slug: 'restoran-leningradskaya-oblast',
+    title: 'Ресторан в Ленинградской области',
+    category: 'commercial',
+    location: 'Ленинградская область',
     year: 2025,
-    area: '320 м²',
+    area: '',
     status: 'Реализован',
-    summary: 'Загородный дом, где лес становится частью интерьера.',
+    summary: 'Ресторан из камня, ореха и тёплого скрытого света с видом на лес.',
     description: [
-      'Двухэтажный дом для семьи с двумя детьми стоит на участке с вековыми соснами. Главная задача — не спорить с лесом, а впустить его внутрь: панорамное остекление гостиной выходит прямо на стволы, а палитра интерьера повторяет цвета коры, хвои и песка.',
-      'Общие зоны собраны вокруг камина из светлого известняка. Кухня-столовая открыта на террасу, спальни на втором этаже спрятаны за дубовыми панелями. Мебель — низкая и спокойная, большая часть сделана на заказ.',
+      'Ресторан стоит среди деревьев, и зал раскрыт к ним панорамным остеклением во всю стену. Интерьер собран из немногих материалов: светлый природный камень с рваной фактурой, тёмный орех и спокойный текстиль кресел.',
+      'Свет почти весь скрытый — тёплые линии под стойками, в нишах и по периметру потолка, поэтому вечером зал светится изнутри. Гостей встречает стойка из цельного камня, за основным залом — приватный зал с длинным столом для больших компаний.',
     ],
-    materials: ['Дуб с масляным покрытием', 'Известняк', 'Известковая штукатурка', 'Лён', 'Шерсть'],
-    tone: 1,
+    materials: ['Природный камень', 'Орех', 'Мрамор', 'Текстиль букле', 'Латунь', 'Скрытая LED-подсветка'],
+    tone: 3,
     images: [],
   },
   {
@@ -236,11 +236,14 @@ export const PROJECTS: Project[] = [
 /* ---------- Кадры проектов: обложка + галерея, с промптами ---------- */
 
 const SCENES: Record<string, [Ratio, string, string][]> = {
-  'dom-u-sosen': [
-    ['4/5', 'Гостиная с панорамным окном на сосновый лес', 'living room of a modern country house with a floor-to-ceiling window framing tall pine trunks, low linen sofa, pale limestone fireplace, wide oak floor'],
-    ['3/2', 'Кухня-столовая с выходом на террасу', 'open kitchen and dining area, long solid oak dining table with simple wooden chairs, sliding glass doors to a wooden terrace and pine forest, limewashed walls'],
-    ['4/5', 'Спальня с дубовыми панелями', 'bedroom with oak wall paneling, low bed with off-white linen bedding, wool throw, small window onto pine branches, soft morning light'],
-    ['3/2', 'Камин из известняка в гостиной', 'close-up of a monolithic pale limestone fireplace, stacked firewood, a ceramic vase with dry branches, textured lime plaster wall'],
+  // Реальные фото проекта: public/photos/restoran-leningradskaya-oblast-01…06.jpg
+  'restoran-leningradskaya-oblast': [
+    ['3/2', 'Стойка хостес из цельного камня и олива в кадке', 'restaurant reception with a solid rough stone desk, walnut wall, olive tree, warm hidden lighting'],
+    ['16/9', 'Столы у панорамного окна и бар из мрамора', 'restaurant dining tables with boucle chairs by panoramic windows, marble bar with backlighting'],
+    ['16/9', 'Основной зал с видом на лес', 'main dining hall with panoramic glazing onto trees, marble columns, olive trees, warm linear lighting'],
+    ['3/2', 'Входная зона: каменная стойка с подсветкой и цветущие ветви', 'entrance with a backlit stone reception desk, walnut panels and blossoming branches'],
+    ['16/9', 'Приватный зал с длинным столом у стены из камня', 'private dining room with a long table, upholstered chairs, rough stone feature wall and pendant lamps'],
+    ['3/2', 'Уборная: мраморная раковина и подсветка в нишах', 'restroom with a long marble washbasin, backlit mirrors and walnut doors'],
   ],
   // Реальные фото проекта: public/photos/apartamenty-serbiya-01…09.jpg
   'apartamenty-serbiya': [
@@ -338,4 +341,4 @@ export function getProject(slug: string) {
 }
 
 /** Проекты для главной: в порядке, задуманном для асимметричной сетки. */
-export const FEATURED = ['dom-u-sosen', 'kvartira-na-patriarshih', 'otel-tishina', 'loft-na-bersenevskoy', 'dom-na-beregu', 'spa-krasnaya-polyana']
+export const FEATURED = ['restoran-leningradskaya-oblast', 'kvartira-na-patriarshih', 'otel-tishina', 'loft-na-bersenevskoy', 'dom-na-beregu', 'spa-krasnaya-polyana']

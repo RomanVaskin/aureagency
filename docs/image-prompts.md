@@ -91,31 +91,43 @@ second bathroom with a green marble vanity, round backlit mirror and bronze wall
 green marble dressing table with a round mirror, boucle stool and a vase with branches, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 1:1
 ```
 
-## Дом у сосен
-Частные дома · Истра, Московская область · 2025
+## Ресторан в Ленинградской области
+Коммерческие помещения · Ленинградская область · 2025
 
-### Обложка — Гостиная с панорамным окном на сосновый лес
-Файл: `public/photos/dom-u-sosen-01.jpg` · 4/5
+### Обложка — Стойка хостес из цельного камня и олива в кадке
+Файл: `public/photos/restoran-leningradskaya-oblast-01.jpg` · 3/2
 ```
-living room of a modern country house with a floor-to-ceiling window framing tall pine trunks, low linen sofa, pale limestone fireplace, wide oak floor, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
-```
-
-### Кухня-столовая с выходом на террасу
-Файл: `public/photos/dom-u-sosen-02.jpg` · 3/2
-```
-open kitchen and dining area, long solid oak dining table with simple wooden chairs, sliding glass doors to a wooden terrace and pine forest, limewashed walls, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
+restaurant reception with a solid rough stone desk, walnut wall, olive tree, warm hidden lighting, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
 ```
 
-### Спальня с дубовыми панелями
-Файл: `public/photos/dom-u-sosen-03.jpg` · 4/5
+### Столы у панорамного окна и бар из мрамора
+Файл: `public/photos/restoran-leningradskaya-oblast-02.jpg` · 16/9
 ```
-bedroom with oak wall paneling, low bed with off-white linen bedding, wool throw, small window onto pine branches, soft morning light, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
+restaurant dining tables with boucle chairs by panoramic windows, marble bar with backlighting, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 16:9
 ```
 
-### Камин из известняка в гостиной
-Файл: `public/photos/dom-u-sosen-04.jpg` · 3/2
+### Основной зал с видом на лес
+Файл: `public/photos/restoran-leningradskaya-oblast-03.jpg` · 16/9
 ```
-close-up of a monolithic pale limestone fireplace, stacked firewood, a ceramic vase with dry branches, textured lime plaster wall, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
+main dining hall with panoramic glazing onto trees, marble columns, olive trees, warm linear lighting, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 16:9
+```
+
+### Входная зона: каменная стойка с подсветкой и цветущие ветви
+Файл: `public/photos/restoran-leningradskaya-oblast-04.jpg` · 3/2
+```
+entrance with a backlit stone reception desk, walnut panels and blossoming branches, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
+```
+
+### Приватный зал с длинным столом у стены из камня
+Файл: `public/photos/restoran-leningradskaya-oblast-05.jpg` · 16/9
+```
+private dining room with a long table, upholstered chairs, rough stone feature wall and pendant lamps, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 16:9
+```
+
+### Уборная: мраморная раковина и подсветка в нишах
+Файл: `public/photos/restoran-leningradskaya-oblast-06.jpg` · 3/2
+```
+restroom with a long marble washbasin, backlit mirrors and walnut doors, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
 ```
 
 ## Квартира на Патриарших

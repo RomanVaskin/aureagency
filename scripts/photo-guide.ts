@@ -33,7 +33,7 @@ out.push(`Все фото сайта — в **одной папке** [\`public/
 out.push('')
 out.push(`**[➜ Загрузить фото в папку](${REPO}/upload/${BRANCH}/public/photos)**`)
 out.push('')
-out.push('1. Назовите файл как в таблице ниже, например `dom-u-sosen-01.jpg`. Подходят `.jpg`, `.jpeg`, `.png`, `.webp`.')
+out.push('1. Назовите файл как в таблице ниже, например `kvartira-na-patriarshih-01.jpg`. Подходят `.jpg`, `.jpeg`, `.png`, `.webp`.')
 out.push('2. Откройте ссылку «Загрузить», перетащите файлы (можно все сразу, до 100 штук).')
 out.push('3. Внизу оставьте **Commit directly to the `preview` branch** и нажмите **Commit changes**.')
 out.push('')

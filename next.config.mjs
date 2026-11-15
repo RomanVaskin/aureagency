@@ -13,6 +13,7 @@ const nextConfig = {
   async redirects() {
     return [
       { source: '/studio', destination: '/services', permanent: true },
+      { source: '/projects/dom-u-sosen', destination: '/projects/restoran-leningradskaya-oblast', permanent: true },
       { source: '/process', destination: '/services', permanent: true },
       { source: '/system', destination: '/services', permanent: true },
     ]
