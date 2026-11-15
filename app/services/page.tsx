@@ -6,6 +6,8 @@ import { HEADING_SIZE, PageIntro } from '@/components/page-intro'
 import { ProjectImage } from '@/components/project-image'
 import { Reveal } from '@/components/reveal'
 import { ProcessTimeline } from '@/components/process-timeline'
+import { PriceTabs } from '@/components/price-tabs'
+import { PRICE_TABS } from '@/lib/pricing'
 import { SITE_IMAGES } from '@/lib/projects'
 
 export const metadata: Metadata = {
@@ -76,6 +78,14 @@ export default function ServicesPage() {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* Стоимость: две вкладки, список услуг — в lib/pricing.ts */}
+        <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
+          <h2 className="text-[13px] text-muted-foreground">Стоимость</h2>
+          <div className="mt-10">
+            <PriceTabs tabs={PRICE_TABS} />
+          </div>
         </section>
 
         <ProcessTimeline

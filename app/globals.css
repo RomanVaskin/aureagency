@@ -193,6 +193,12 @@
     background-color: var(--dusk-bottom);
     background-image: linear-gradient(180deg, var(--dusk) 0%, var(--dusk) 50%, var(--dusk-bottom) 100%);
   }
+  /* Блок «Стоимость» на «Услугах» — тот же фон, что у слайдера и «Контактов» */
+  .dusk-block {
+    color: #ffffff;
+    background-color: #48423b;
+    background-image: linear-gradient(180deg, #6f665b 0%, #6f665b 50%, #48423b 100%);
+  }
   .page-dusk ::selection {
     background: #ffffff;
     color: var(--dusk);
