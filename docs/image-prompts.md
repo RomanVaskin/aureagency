@@ -22,7 +22,7 @@ soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, 
 wide view of a serene living room, low off-white linen sofa, travertine coffee table, wide oak floorboards, limewashed walls, large window onto pine trees, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 16:9
 ```
 
-### Студия AURE: большой стол с образцами материалов
+### Студия EOS Bureau: большой стол с образцами материалов
 Файл: `public/photos/studio.jpg` · 3/2
 ```
 interior design studio, long oak table with material samples — stone, wood, linen, plaster swatches — architectural drawings, large window, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2

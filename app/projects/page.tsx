@@ -7,8 +7,8 @@ import { ProjectsFilter } from '@/components/projects-filter'
 import { CATEGORIES, PROJECTS } from '@/lib/projects'
 
 export const metadata: Metadata = {
-  title: 'Проекты — AURE',
-  description: 'Коммерческие помещения, частные дома и квартиры — проекты студии AURE.',
+  title: 'Проекты — EOS Bureau',
+  description: 'Коммерческие помещения, частные дома и квартиры — проекты студии EOS Bureau.',
   alternates: { canonical: '/projects' },
 }
 

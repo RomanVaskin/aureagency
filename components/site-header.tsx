@@ -65,7 +65,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
       } ${solid ? 'bg-background' : 'bg-transparent'} ${light ? 'text-white' : 'text-foreground'}`}
     >
       <div className="relative flex h-[72px] items-center justify-between px-5 md:h-[110px] md:px-[2.7vw]">
-        <a href="/" aria-label="AURE — на главную" className="relative z-10">
+        <a href="/" aria-label="EOS Bureau — на главную" className="relative z-10">
           <Logo height={15} light={light} />
         </a>
 

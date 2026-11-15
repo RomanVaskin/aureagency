@@ -5,8 +5,8 @@ import { PageIntro } from '@/components/page-intro'
 import { CITY, EMAIL, PHONE, PHONE_HREF, TELEGRAM_URL, WHATSAPP_URL } from '@/lib/contacts'
 
 export const metadata: Metadata = {
-  title: 'Контакты — AURE',
-  description: 'Расскажите о своём доме, квартире или общественном пространстве — студия AURE ответит в течение дня.',
+  title: 'Контакты — EOS Bureau',
+  description: 'Расскажите о своём доме, квартире или общественном пространстве — студия EOS Bureau ответит в течение дня.',
   alternates: { canonical: '/contact' },
 }
 

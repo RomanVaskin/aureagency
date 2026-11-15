@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const p = getProject((await params).slug)
   if (!p) return {}
   return {
-    title: `${p.title} — AURE`,
+    title: `${p.title} — EOS Bureau`,
     description: p.summary,
     alternates: { canonical: `/projects/${p.slug}` },
   }

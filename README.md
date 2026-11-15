@@ -1,4 +1,4 @@
-# AURE — студия архитектуры и интерьера
+# EOS Bureau — студия архитектуры и интерьера
 
 Сайт на Next.js. Запуск: `pnpm install && pnpm dev` → http://localhost:3000
 

@@ -8,8 +8,8 @@ import { PriceTabs } from '@/components/price-tabs'
 import { PRICE_TABS } from '@/lib/pricing'
 
 export const metadata: Metadata = {
-  title: 'Услуги — AURE',
-  description: 'AURE — студия архитектуры и дизайна интерьера в Москве. Подход, услуги и этапы работы.',
+  title: 'Услуги — EOS Bureau',
+  description: 'EOS Bureau — студия архитектуры и дизайна интерьера в Москве. Подход, услуги и этапы работы.',
   alternates: { canonical: '/services' },
 }
 

@@ -324,7 +324,7 @@ export const SITE_IMAGES = {
   },
   studio: {
     src: '/photos/studio.jpg',
-    alt: 'Студия AURE: большой стол с образцами материалов',
+    alt: 'Студия EOS Bureau: большой стол с образцами материалов',
     ratio: '3/2' as Ratio,
     prompt: `interior design studio, long oak table with material samples — stone, wood, linen, plaster swatches — architectural drawings, large window, ${PROMPT_STYLE} --ar 3:2`,
   },

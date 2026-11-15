@@ -15,9 +15,9 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
 })
 
-const SITE_TITLE = 'AURE — студия архитектуры и дизайна интерьера'
+const SITE_TITLE = 'EOS Bureau — студия архитектуры и дизайна интерьера'
 const SITE_DESCRIPTION =
-  'AURE — студия архитектуры и дизайна интерьера в Москве. Частные дома, квартиры, отели и рестораны: тихие пространства из натуральных материалов.'
+  'EOS Bureau — студия архитектуры и дизайна интерьера в Москве. Частные дома, квартиры, отели и рестораны: тихие пространства из натуральных материалов.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aureagency.ru'),
@@ -28,17 +28,17 @@ export const metadata: Metadata = {
   // their own title/description still share this brand image and site name.
   openGraph: {
     type: 'website',
-    siteName: 'AURE',
+    siteName: 'EOS Bureau',
     locale: 'ru_RU',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'AURE — логотип на каменной стене' }],
+    images: [{ url: '/photos/kvartira-na-patriarshih-01.jpg', width: 1651, height: 953, alt: 'EOS Bureau — гостиная в квартире на Патриарших' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ['/og-image.jpg'],
+    images: ['/photos/kvartira-na-patriarshih-01.jpg'],
   },
 }
 

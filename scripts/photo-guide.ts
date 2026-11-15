@@ -27,7 +27,7 @@ for (const p of PROJECTS)
 
 const total = groups.reduce((n, g) => n + g.rows.length, 0)
 const out: string[] = []
-out.push('# Фото для сайта AURE')
+out.push('# Фото для сайта EOS Bureau')
 out.push('')
 out.push(`Все фото сайта — в **одной папке** [\`public/photos\`](${REPO}/tree/${BRANCH}/public/photos) (ветка \`preview\`).`)
 out.push('')

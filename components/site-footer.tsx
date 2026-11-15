@@ -52,7 +52,7 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-      <p className="mt-24 text-[14px] tracking-[0.03em] text-muted-foreground md:mt-40">© {new Date().getFullYear()} AURE</p>
+      <p className="mt-24 text-[14px] tracking-[0.03em] text-muted-foreground md:mt-40">© {new Date().getFullYear()} EOS Bureau</p>
     </footer>
   )
 }

@@ -1,24 +1,23 @@
-import Image from 'next/image'
-
-/** Wordmark in public/aure-logo.svg (viewBox 2850 × 300). light — белый вариант поверх фото. */
+/**
+ * Надпись-логотип EOS Bureau. Набрана шрифтом сайта (Jost), поэтому сама берёт цвет
+ * текста: тёмная на светлом фоне, белая над фото и на тёмных страницах.
+ * height — примерная высота заглавных букв в пикселях (как у прежнего логотипа-картинки).
+ */
 export function Logo({
   className = '',
   height = 22,
-  light = false,
 }: {
   className?: string
   height?: number
+  /** Оставлено для совместимости: цвет теперь наследуется от текста */
   light?: boolean
 }) {
   return (
-    <Image
-      src="/aure-logo.svg"
-      alt="AURE AGENCY"
-      width={height * (2850 / 300)}
-      height={height}
-      priority
-      className={`transition-[filter] duration-500 ${light ? 'brightness-0 invert' : ''} ${className}`}
-      style={{ height, width: 'auto' }}
-    />
+    <span
+      className={`inline-block whitespace-nowrap font-sans font-light uppercase leading-none ${className}`}
+      style={{ fontSize: Math.round(height * 1.4), letterSpacing: '0.16em' }}
+    >
+      EOS Bureau
+    </span>
   )
 }
