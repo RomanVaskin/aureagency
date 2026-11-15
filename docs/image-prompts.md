@@ -35,7 +35,7 @@ flat lay close-up of interior material samples: travertine, oak veneer, linen fa
 ```
 
 ## Апартаменты в Сербии
-Квартиры · Сербия · 2025
+Квартиры · Белград, Сербия · 2025
 
 ### Обложка — Столовая: круглый ореховый стол, кресла из оливкового бархата и люстра-облако
 Файл: `public/photos/apartamenty-serbiya-01.jpg` · 16/9

@@ -65,9 +65,9 @@ export const PROJECTS: Project[] = [
     slug: 'apartamenty-serbiya',
     title: 'Апартаменты в Сербии',
     category: 'apartments',
-    location: 'Сербия',
+    location: 'Белград, Сербия',
     year: 2025,
-    area: '',
+    area: '120 м²',
     status: 'Реализован',
     summary: 'Тёплый орех, зелёный мрамор и мягкие текстуры букле.',
     description: [
