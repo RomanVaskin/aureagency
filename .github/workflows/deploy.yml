@@ -76,9 +76,9 @@ jobs:
       - name: Check site and static assets
         run: |
           set -e
-          site=https://aureagency.ru
+          site=https://eosbureau.ru
           for i in $(seq 1 12); do
-            code=$(curl -s -o page.html -w '%{http_code}' "$site/" || true)
+            code=$(curl -L -s -o page.html -w '%{http_code}' "$site/" || true)
             [ "$code" = "200" ] && break
             sleep 5
           done
@@ -88,7 +88,7 @@ jobs:
           fail=0
           for path in $(grep -oE '(src|href)="/(_next/static|[A-Za-z0-9_-]+\.(png|svg|jpg))[^"]*"' page.html \
                         | sed -E 's/.*="([^"]+)"/\1/' | sort -u); do
-            c=$(curl -s -o /dev/null -w '%{http_code}' "$site$path" || true)
+            c=$(curl -L -s -o /dev/null -w '%{http_code}' "$site$path" || true)
             echo "$c $path"
             [ "$c" = "200" ] || fail=1
           done
