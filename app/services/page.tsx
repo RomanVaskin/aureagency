@@ -33,7 +33,8 @@ export default function ServicesPage() {
     <>
       <SiteHeader />
       <main className="font-primary">
-        <PageIntro>
+        {/* фраза набрана мелко, как основной текст страницы */}
+        <PageIntro titleClassName="max-w-[560px] text-[15px] leading-[1.6] tracking-normal md:text-[18px]">
           Мы верим, что хороший интерьер не кричит. Он спокоен, удобен и с годами становится только лучше.
         </PageIntro>
 
