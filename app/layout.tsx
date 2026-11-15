@@ -20,7 +20,7 @@ const SITE_DESCRIPTION =
   'EOS Bureau — студия архитектуры и дизайна интерьера в Москве. Частные дома, квартиры, отели и рестораны: тихие пространства из натуральных материалов.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aureagency.ru'),
+  metadataBase: new URL('https://eosbureau.ru'),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   generator: 'v0.app',
