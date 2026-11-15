@@ -3,12 +3,9 @@ import Link from 'next/link'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { HEADING_SIZE, PageIntro } from '@/components/page-intro'
-import { ProjectImage } from '@/components/project-image'
-import { Reveal } from '@/components/reveal'
 import { ProcessTimeline } from '@/components/process-timeline'
 import { PriceTabs } from '@/components/price-tabs'
 import { PRICE_TABS } from '@/lib/pricing'
-import { SITE_IMAGES } from '@/lib/projects'
 
 export const metadata: Metadata = {
   title: 'Услуги — AURE',
@@ -49,22 +46,6 @@ export default function ServicesPage() {
         >
           Мы верим, что хороший интерьер не кричит. Он спокоен, удобен и с годами становится только лучше.
         </PageIntro>
-
-        <section className="mx-auto grid max-w-[1600px] gap-10 px-5 pt-16 md:grid-cols-12 md:gap-8 md:px-10 md:pt-28">
-          <Reveal className="md:col-span-8">
-            <ProjectImage {...SITE_IMAGES.studio} tone={1} variant={3} priority />
-          </Reveal>
-          <Reveal className="space-y-5 text-[15px] leading-relaxed text-muted-foreground md:col-span-3 md:col-start-10 md:self-end" index={1}>
-            <p>
-              AURE — команда архитекторов и дизайнеров в Москве. Мы работаем с частными домами, квартирами,
-              отелями, ресторанами и офисами по всей России.
-            </p>
-            <p>
-              Нам близок принцип мягкого минимализма: ясная планировка, природные материалы, приглушённая палитра и
-              внимание к свету. Мы проектируем не картинку, а повседневную жизнь в пространстве.
-            </p>
-          </Reveal>
-        </section>
 
         <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
           <h2 className="text-[13px] text-muted-foreground">Что мы делаем</h2>
