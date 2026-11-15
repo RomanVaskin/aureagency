@@ -23,7 +23,7 @@ export function categoryLabel(id: Category) {
 export type Ratio = '4/5' | '3/2' | '16/9' | '1/1'
 
 export type ProjectImage = {
-  /** Путь от public/, например /images/projects/dom-u-sosen/01.jpg */
+  /** Путь от public/, например /photos/dom-u-sosen-01.jpg (все фото — в одной папке public/photos) */
   src: string
   alt: string
   ratio: Ratio
@@ -54,7 +54,7 @@ export const PROMPT_STYLE =
   'soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic'
 
 const img = (slug: string, n: number, ratio: Ratio, alt: string, scene: string): ProjectImage => ({
-  src: `/images/projects/${slug}/${String(n).padStart(2, '0')}.jpg`,
+  src: `/photos/${slug}-${String(n).padStart(2, '0')}.jpg`,
   alt,
   ratio,
   prompt: `${scene}, ${PROMPT_STYLE} --ar ${ratio.replace('/', ':')}`,
@@ -282,19 +282,19 @@ for (const p of PROJECTS) {
 /** Кадры вне проектов: главный экран, студия. */
 export const SITE_IMAGES = {
   hero: {
-    src: '/images/home/hero.jpg',
+    src: '/photos/home-hero.jpg',
     alt: 'Светлая гостиная с низким диваном, дубовым полом и видом на сосны',
     ratio: '16/9' as Ratio,
     prompt: `wide view of a serene living room, low off-white linen sofa, travertine coffee table, wide oak floorboards, limewashed walls, large window onto pine trees, ${PROMPT_STYLE} --ar 16:9`,
   },
   studio: {
-    src: '/images/studio/studio.jpg',
+    src: '/photos/studio.jpg',
     alt: 'Студия AURE: большой стол с образцами материалов',
     ratio: '3/2' as Ratio,
     prompt: `interior design studio, long oak table with material samples — stone, wood, linen, plaster swatches — architectural drawings, large window, ${PROMPT_STYLE} --ar 3:2`,
   },
   materials: {
-    src: '/images/studio/materials.jpg',
+    src: '/photos/materials.jpg',
     alt: 'Образцы материалов: камень, дуб, лён и штукатурка',
     ratio: '4/5' as Ratio,
     prompt: `flat lay close-up of interior material samples: travertine, oak veneer, linen fabric, lime plaster, brass, arranged on a plaster surface, soft side light, ${PROMPT_STYLE} --ar 4:5`,

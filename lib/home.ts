@@ -29,7 +29,7 @@ const card = (n: number, span: 1 | 2, meta = ['АРХИТЕКТУРА', 'ЖИЛ�
   title: `Проект ${n}`,
   text: TEXT,
   meta,
-  image: `/images/home/card-${n}.jpg`,
+  image: `/photos/home-card-${n}.jpg`,
   href: '/projects',
   span,
 })
@@ -37,7 +37,7 @@ const card = (n: number, span: 1 | 2, meta = ['АРХИТЕКТУРА', 'ЖИЛ�
 export const SLIDES: Slide[] = Array.from({ length: 6 }, (_, i) => ({
   title: `Проект ${i + 1}`,
   text: 'Одна-две строки о проекте: где он находится и какое настроение создаёт пространство. Текст стоит по центру в нижней части кадра.',
-  image: `/images/home/slide-${i + 1}.jpg`,
+  image: `/photos/home-slide-${i + 1}.jpg`,
   href: '/projects',
 }))
 
@@ -56,7 +56,7 @@ export const BLOCKS: Block[] = [
     slide: {
       title: 'Избранный проект',
       text: 'Полноэкранный кадр одного проекта с названием и коротким описанием — пауза между блоками ленты.',
-      image: '/images/home/feature-1.jpg',
+      image: '/photos/home-feature-1.jpg',
       href: '/projects',
     },
   },
@@ -70,7 +70,7 @@ export const BLOCKS: Block[] = [
     slide: {
       title: 'Избранный проект',
       text: 'Ещё один полноэкранный кадр. Количество и порядок блоков задаются в lib/home.ts.',
-      image: '/images/home/feature-2.jpg',
+      image: '/photos/home-feature-2.jpg',
       href: '/projects',
     },
   },
