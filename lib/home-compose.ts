@@ -5,29 +5,45 @@ import { HOME_PICKS, type Block, type Card, type Slide } from './home'
 /**
  * Подборка для главной из раздела «Проекты»:
  *  • только проекты, у которых уже лежат настоящие фото (заглушки не берутся);
- *  • ровно один кадр от каждого проекта, ни один кадр не повторяется;
- *  • кадр — из HOME_PICKS, иначе обложка проекта.
+ *  • главная карусель — по одному кадру от каждого такого проекта;
+ *  • лента «Последние работы» — другой кадр тех же проектов, ни один снимок
+ *    на странице не повторяется;
+ *  • кадры — из HOME_PICKS, иначе обложка (карусель) и следующее фото (лента).
  * Новый проект с фото появляется на главной сам, без правки этой страницы.
  */
 type Pick = { project: Project; src: string; alt: string; ratio: Ratio; position?: string }
 
 const WIDE: Ratio[] = ['16/9', '3/2']
 
-function picks(): Pick[] {
+function photoAt(project: Project, n: number | undefined) {
+  if (!n) return undefined
+  const im = project.images[n - 1]
+  return im && findPhoto(im.src) ? im : undefined
+}
+
+function picks(): { hero: Pick[]; grid: Pick[] } {
   const order = [...Object.keys(HOME_PICKS), ...PROJECTS.map((p) => p.slug).filter((s) => !(s in HOME_PICKS))]
-  const out: Pick[] = []
+  const hero: Pick[] = []
+  const grid: Pick[] = []
   const used = new Set<string>()
   for (const slug of order) {
     const project = PROJECTS.find((p) => p.slug === slug)
     if (!project) continue
     const want = HOME_PICKS[slug]
-    const idx = Math.min(Math.max((want?.photo ?? 1) - 1, 0), project.images.length - 1)
-    const im = project.images[idx]
-    if (!im || !findPhoto(im.src) || used.has(im.src)) continue
-    used.add(im.src)
-    out.push({ project, src: im.src, alt: im.alt, ratio: im.ratio, position: want?.position })
+    const h = photoAt(project, want?.hero ?? 1)
+    if (!h || used.has(h.src)) continue
+    used.add(h.src)
+    hero.push({ project, src: h.src, alt: h.alt, ratio: h.ratio, position: want?.heroPosition })
+    // для ленты — заданное фото или первое другое настоящее фото проекта
+    const g =
+      photoAt(project, want?.grid) ??
+      project.images.map((_, i) => photoAt(project, i + 1)).find((im) => im && im.src !== h.src)
+    if (g && !used.has(g.src)) {
+      used.add(g.src)
+      grid.push({ project, src: g.src, alt: g.alt, ratio: g.ratio, position: want?.gridPosition })
+    }
   }
-  return out
+  return { hero, grid }
 }
 
 const city = (p: Project) => p.location.split(',')[0]
@@ -52,16 +68,15 @@ function toCard(k: Pick, span: 1 | 2, start?: Card['start']): Card {
 }
 
 /**
- * Раскладка: первый кадр — на весь первый экран (до 3 кадров слайдером, если
- * проектов много), остальные — рядами в одну строку. Широкие кадры получают
+ * Раскладка: главная карусель — по кадру от каждого проекта; лента — вторые кадры
+ * рядами в одну строку. Широкие кадры получают
  * широкие ячейки, вертикальные и детали — узкие; ряды чередуют
  * «широкий + узкие» и «узкие + широкий», одиночный остаток — кадр на всю ширину.
  */
 export function composeHome(): { slides: Slide[]; blocks: Block[] } {
-  const all = picks()
-  const heroCount = all.length >= 7 ? 3 : 1
-  const slides = all.slice(0, heroCount).map(toSlide)
-  let rest = all.slice(heroCount)
+  const { hero, grid } = picks()
+  const slides = hero.map(toSlide)
+  let rest = grid
 
   const rows: Card[][] = []
   const features: Slide[] = []
