@@ -1,4 +1,4 @@
-import { findPhoto } from '@/lib/photo'
+import { findPhoto, photoSize } from '@/lib/photo'
 import type { Ratio } from '@/lib/projects'
 
 /** Тона заглушек: тёплые нейтральные из палитры сайта (#F3F3F1 и темнее). */
@@ -12,11 +12,21 @@ const ASPECT: Record<Ratio, string> = {
   '1/1': 'aspect-square',
   '2/3': 'aspect-[2/3]',
 }
+/** Те же рамки, но только с планшета: на телефоне фото идёт в своих пропорциях */
+const MD_ASPECT: Record<Ratio, string> = {
+  '4/5': 'md:aspect-[4/5]',
+  '3/2': 'md:aspect-[3/2]',
+  '16/9': 'md:aspect-[16/9]',
+  '1/1': 'md:aspect-square',
+  '2/3': 'md:aspect-[2/3]',
+}
 
 
 /**
  * Фото из public/ или, пока его нет, спокойная заглушка с линейным эскизом комнаты.
  * Проверка идёт на сервере при сборке, поэтому достаточно положить файл по пути src.
+ * На телефоне настоящее фото показывается целиком, в своих пропорциях (без обрезки);
+ * с планшета — в рамке ratio, аккуратно кадрированное.
  */
 export function ProjectImage({
   src,
@@ -44,12 +54,21 @@ export function ProjectImage({
 
   const photo = findPhoto(src)
   if (photo) {
+    const size = photoSize(photo)
+    const photoBox = fill
+      ? box
+      : `relative overflow-hidden aspect-[var(--photo-ar)] ${MD_ASPECT[ratio]} ${className}`
     return (
-      <div className={box}>
+      <div
+        className={photoBox}
+        style={{ '--photo-ar': size ? `${size.w} / ${size.h}` : ratio.replace('/', ' / ') } as React.CSSProperties}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={photo}
           alt={alt}
+          width={size?.w}
+          height={size?.h}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
           className={`absolute inset-0 h-full w-full object-cover ${imgClassName}`}

@@ -50,7 +50,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </section>
 
         <section className="mx-auto max-w-[1600px] px-5 pt-12 md:px-10 md:pt-16">
-          <ProjectImage {...cover} ratio="16/9" tone={p.tone} variant={idx} priority className="max-md:aspect-[4/5]" />
+          <ProjectImage {...cover} ratio="16/9" tone={p.tone} variant={idx} priority />
         </section>
 
         <section className="mx-auto grid max-w-[1600px] gap-12 px-5 pt-16 md:grid-cols-12 md:gap-8 md:px-10 md:pt-28">
