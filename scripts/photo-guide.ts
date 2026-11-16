@@ -3,7 +3,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { PROJECTS, SITE_IMAGES } from '../lib/projects.ts'
-import { SLIDES, BLOCKS } from '../lib/home.ts'
 
 const REPO = 'https://github.com/RomanVaskin/aureagency'
 const BRANCH = 'preview'
@@ -11,13 +10,7 @@ type Row = { file: string; what: string; ratio: string }
 const groups: { title: string; rows: Row[] }[] = []
 const r = (x: string) => x.replace('/', ':')
 
-const home: Row[] = []
-SLIDES.forEach((s, i) => home.push({ file: s.image, what: `Слайдер на первом экране, кадр ${i + 1}`, ratio: '16:9 горизонтальное' }))
-for (const b of BLOCKS) {
-  if (b.kind === 'feature') home.push({ file: b.slide.image, what: 'Большой кадр на всю ширину между блоками', ratio: '16:9 горизонтальное' })
-  else for (const row of b.rows) for (const c of row) home.push({ file: c.image, what: `Блок «${b.label}», карточка «${c.title}»`, ratio: c.span === 2 ? '3:2 горизонтальное' : '4:5 вертикальное' })
-}
-groups.push({ title: 'Главная', rows: home })
+// Главная собирается сама из фото проектов (lib/home-compose.ts) — отдельные фото для неё не нужны.
 groups.push({ title: 'Услуги', rows: [SITE_IMAGES.studio, SITE_IMAGES.materials].map((im) => ({ file: im.src, what: im.alt, ratio: r(im.ratio) + (im.ratio === '4/5' ? ' вертикальное' : ' горизонтальное') })) })
 for (const p of PROJECTS)
   groups.push({

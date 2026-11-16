@@ -43,14 +43,16 @@ export function WorkSection({
   )
 }
 
+const START = { 1: 'md:col-start-1', 2: 'md:col-start-2', 3: 'md:col-start-3', 4: 'md:col-start-4' } as const
+
 function ProjectTile({ card, tone }: { card: Card; tone: number }) {
   const wide = card.span === 2
   return (
-    <article className={wide ? 'md:col-span-2' : 'md:col-span-1'}>
+    <article className={`${wide ? 'md:col-span-2' : 'md:col-span-1'} ${card.start ? START[card.start] : ''}`}>
       <a href={card.href} className="group block">
         {/* ширина узкой колонки : высота ряда = 426 : 585 (как в образце) */}
         <div className={`relative overflow-hidden ${wide ? 'aspect-[3/2] md:aspect-[879/585]' : 'aspect-[4/5] md:aspect-[426/585]'}`}>
-          <Media src={card.image} alt={card.title} tone={tone} className="transition-transform duration-[900ms] ease-out group-hover:scale-[1.02]" />
+          <Media src={card.image} alt={card.alt ?? card.title} position={card.position} tone={tone} className="transition-transform duration-[900ms] ease-out group-hover:scale-[1.02]" />
         </div>
         <h3 className="mt-8 font-serif text-[17px] uppercase leading-snug tracking-[0.4em] md:mt-10 md:text-[19px]">
           {card.title}
