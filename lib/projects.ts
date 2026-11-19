@@ -20,7 +20,7 @@ export function categoryLabel(id: Category) {
   return CATEGORIES.find((c) => c.id === id)?.label ?? ''
 }
 
-export type Ratio = '4/5' | '3/2' | '16/9' | '1/1' | '2/3'
+export type Ratio = '4/5' | '3/2' | '16/9' | '1/1' | '2/3' | '3/1'
 
 export type ProjectImage = {
   /** Путь от public/, например /photos/kvartira-na-patriarshih-01.jpg (все фото — в одной папке public/photos) */
@@ -61,6 +61,23 @@ const img = (slug: string, n: number, ratio: Ratio, alt: string, scene: string):
 })
 
 export const PROJECTS: Project[] = [
+  {
+    slug: 'dzen-spa',
+    title: 'Дзен-спа в японском стиле',
+    category: 'commercial',
+    location: 'Москва',
+    year: 2024,
+    area: '260 м²',
+    status: 'Реализован',
+    summary: 'SPA в японском стиле: тёмное дерево, природный камень и мягкий дневной свет.',
+    description: [
+      'Пространство SPA построено на японских мотивах: решётчатые перегородки и сёдзи, тёмное дерево, грубый природный камень и живые деревья в интерьере. Свет мягкий и рассеянный — днём он проходит сквозь рисовую бумагу окон, вечером остаётся только тёплая подсветка в нишах.',
+      'Гостя встречает лобби с каменной стойкой и зоной ожидания вокруг низкого столика из камня. Дальше — массажная с видом на сад, онсэн с деревянной купелью у панорамного окна и санузлы из того же камня и дерева.',
+    ],
+    materials: ['Природный камень', 'Тёмное дерево', 'Рисовая бумага', 'Декоративная штукатурка', 'Лён', 'Керамика'],
+    tone: 2,
+    images: [],
+  },
   {
     slug: 'apartamenty-serbiya',
     title: 'Апартаменты в Сербии',
@@ -198,23 +215,6 @@ export const PROJECTS: Project[] = [
     images: [],
   },
   {
-    slug: 'spa-krasnaya-polyana',
-    title: 'Спа «Красная Поляна»',
-    category: 'commercial',
-    location: 'Сочи, Красная Поляна',
-    year: 2025,
-    area: '600 м²',
-    status: 'В работе',
-    summary: 'Горный спа-комплекс с бассейном и видом на хребет.',
-    description: [
-      'Спа-комплекс при горном курорте: бассейн, хаммам, сауны, зоны отдыха. Пространство спускается по рельефу, и с каждого уровня открывается вид на горы.',
-      'Основной материал — светлый камень, который в бассейне и хаммаме переходит в мозаику того же тона. Дерево — только в зонах отдыха и саунах, чтобы оставаться тёплым на ощупь.',
-    ],
-    materials: ['Известняк', 'Каменная мозаика', 'Термососна', 'Лён', 'Терракота'],
-    tone: 0,
-    images: [],
-  },
-  {
     slug: 'ofis-liniya',
     title: 'Офис «Линия»',
     category: 'commercial',
@@ -244,6 +244,14 @@ const SCENES: Record<string, [Ratio, string, string][]> = {
     ['3/2', 'Входная зона: каменная стойка с подсветкой и цветущие ветви', 'entrance with a backlit stone reception desk, walnut panels and blossoming branches'],
     ['16/9', 'Приватный зал с длинным столом у стены из камня', 'private dining room with a long table, upholstered chairs, rough stone feature wall and pendant lamps'],
     ['3/2', 'Уборная: мраморная раковина и подсветка в нишах', 'restroom with a long marble washbasin, backlit mirrors and walnut doors'],
+  ],
+  // Реальные фото проекта: public/photos/dzen-spa-01…05.jpg
+  'dzen-spa': [
+    ['16/9', 'Лобби: стойка из природного камня, зона ожидания и живые деревья', 'zen spa lobby with a rough stone reception desk, low boucle seating around a stone table, bonsai and maple trees, shoji screens'],
+    ['3/2', 'Массажная: стол у окна-сёдзи, тёмное дерево и камень', 'massage room with a wooden massage table by a shoji window, dark wood cabinetry, stone wall, soft daylight'],
+    ['3/2', 'Онсэн: деревянная купель на каменном подиуме у панорамного окна', 'japanese onsen with a round wooden hot tub on a stone platform, steam, panoramic window to a bamboo garden'],
+    ['3/1', 'Вход: каменная стойка и вид на сад', 'spa entrance with a rough stone counter, wooden slats, bench and a red maple by the glazed doors'],
+    ['3/1', 'Санузел: каменная столешница с раковинами и дерево', 'spa restroom with a long stone vanity, two stone basins, round mirrors and dark wood partitions'],
   ],
   // Реальные фото проекта: public/photos/apartamenty-serbiya-01…09.jpg
   'apartamenty-serbiya': [
@@ -296,12 +304,6 @@ const SCENES: Record<string, [Ratio, string, string][]> = {
     ['3/2', 'Мастерская за стеклянной перегородкой', 'pottery workshop seen through a glass partition, potter wheels, oak work tables, shelves of drying clay pieces'],
     ['4/5', 'Стеллаж с изделиями', 'oak and stainless steel shelving with rows of handmade ceramic cups and plates, clay-toned plaster wall'],
   ],
-  'spa-krasnaya-polyana': [
-    ['3/2', 'Бассейн с видом на горный хребет', 'indoor spa pool clad in pale limestone mosaic, panoramic window onto a mountain ridge, linen loungers, calm water reflections'],
-    ['4/5', 'Хаммам из каменной мозаики', 'hammam with pale stone mosaic, heated stone bench, domed ceiling with small round skylights, steam, soft light'],
-    ['3/2', 'Зона отдыха из термососны', 'spa relaxation room with thermo-pine slatted walls, low daybeds with linen, terracotta vessels, view of mountains'],
-    ['4/5', 'Сауна с панорамным окном', 'sauna with thermo-pine benches and a panoramic window to snowy mountains'],
-  ],
   'ofis-liniya': [
     ['3/2', 'Кухня офиса с общим столом', 'office kitchen like a home, long oak communal table, oak slat ceiling, warm white walls, pendant lights, plants'],
     ['4/5', 'Библиотека для тихой работы', 'quiet office library, oak bookshelves, wool carpet, two armchairs and a reading lamp, acoustic felt panels'],
@@ -341,4 +343,4 @@ export function getProject(slug: string) {
 }
 
 /** Проекты для главной: в порядке, задуманном для асимметричной сетки. */
-export const FEATURED = ['restoran-leningradskaya-oblast', 'kvartira-na-patriarshih', 'otel-tishina', 'loft-na-bersenevskoy', 'dom-na-beregu', 'spa-krasnaya-polyana']
+export const FEATURED = ['restoran-leningradskaya-oblast', 'kvartira-na-patriarshih', 'otel-tishina', 'loft-na-bersenevskoy', 'dom-na-beregu', 'dzen-spa']

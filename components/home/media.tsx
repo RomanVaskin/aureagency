@@ -13,6 +13,7 @@ export function Media({
   dark = false,
   priority = false,
   className = '',
+  position,
 }: {
   src: string
   alt?: string
@@ -20,6 +21,8 @@ export function Media({
   dark?: boolean
   priority?: boolean
   className?: string
+  /** Какую часть кадра держать в центре при кадрировании (object-position) */
+  position?: string
 }) {
   const photo = findPhoto(src)
   if (photo) {
@@ -29,7 +32,9 @@ export function Media({
         src={photo}
         alt={alt}
         loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : 'auto'}
         decoding="async"
+        style={position ? { objectPosition: position } : undefined}
         className={`absolute inset-0 h-full w-full object-cover ${className}`}
       />
     )
