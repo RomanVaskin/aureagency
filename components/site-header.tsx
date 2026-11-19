@@ -13,7 +13,8 @@ export const NAV = [
 
 /**
  * Шапка как в образце: логотип слева, меню капслоком по центру, поиск справа.
- * Прозрачная и белая над полноэкранными кадрами (секции с data-header="light"),
+ * Над полноэкранными кадрами и тёмными страницами (секции с data-header="light") —
+ * сплошная серая плашка #6f665b с белым текстом, фото начинается под ней;
  * тёмная на кремовом фоне. При прокрутке вниз прячется, при прокрутке вверх
  * появляется снова — уже на кремовой подложке, если под ней не фото.
  * overlay — страница начинается с полноэкранного кадра (главная).
@@ -62,7 +63,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[transform,background-color,color] duration-500 ease-out ${
         hidden && !open ? '-translate-y-full' : 'translate-y-0'
-      } ${solid ? 'bg-background' : 'bg-transparent'} ${light ? 'text-white' : 'text-foreground'}`}
+      } ${light ? 'bg-[#6f665b]' : solid ? 'bg-background' : 'bg-transparent'} ${light ? 'text-white' : 'text-foreground'}`}
     >
       <div className="relative flex h-[72px] items-center justify-between px-5 md:h-[110px] md:px-[2.7vw]">
         <a href="/" aria-label="EOS Bureau — на главную" className="relative z-10">

@@ -28,7 +28,7 @@ export function HeroSlider({
   return (
     <section
       data-header="light"
-      className="relative h-[100svh] min-h-[520px] w-full overflow-hidden bg-[#4f4840] text-white"
+      className="relative h-[100svh] min-h-[520px] w-full overflow-hidden bg-[#6f665b] text-white"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       aria-roledescription="карусель"
@@ -36,7 +36,7 @@ export function HeroSlider({
       {slides.map((s, k) => (
         <div
           key={s.key}
-          className={`absolute inset-0 transition-opacity duration-[1200ms] ease-out ${k === i ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-x-0 bottom-0 top-[72px] transition-opacity duration-[1200ms] ease-out md:top-[110px] ${k === i ? 'opacity-100' : 'opacity-0'}`}
           aria-hidden={k !== i}
         >
           {s.media}
