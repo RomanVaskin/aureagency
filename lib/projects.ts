@@ -63,11 +63,11 @@ const img = (slug: string, n: number, ratio: Ratio, alt: string, scene: string):
 export const PROJECTS: Project[] = [
   {
     slug: 'dzen-spa',
-    title: 'Дзен-спа',
+    title: 'Дзен-спа в японском стиле',
     category: 'commercial',
-    location: '',
-    year: 2025,
-    area: '',
+    location: 'Москва',
+    year: 2024,
+    area: '260 м²',
     status: 'Реализован',
     summary: 'SPA в японском стиле: тёмное дерево, природный камень и мягкий дневной свет.',
     description: [

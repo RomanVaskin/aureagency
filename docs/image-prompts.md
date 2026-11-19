@@ -34,8 +34,8 @@ interior design studio, long oak table with material samples — stone, wood, li
 flat lay close-up of interior material samples: travertine, oak veneer, linen fabric, lime plaster, brass, arranged on a plaster surface, soft side light, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
 ```
 
-## Дзен-спа
-Коммерческие помещения ·  · 2025
+## Дзен-спа в японском стиле
+Коммерческие помещения · Москва · 2024
 
 ### Обложка — Лобби: стойка из природного камня, зона ожидания и живые деревья
 Файл: `public/photos/dzen-spa-01.jpg` · 16/9
