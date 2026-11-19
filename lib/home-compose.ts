@@ -13,7 +13,7 @@ import { HOME_PICKS, type Block, type Card, type Slide } from './home'
  */
 type Pick = { project: Project; src: string; alt: string; ratio: Ratio; position?: string }
 
-const WIDE: Ratio[] = ['16/9', '3/2']
+const WIDE: Ratio[] = ['16/9', '3/2', '3/1']
 
 function photoAt(project: Project, n: number | undefined) {
   if (!n) return undefined
@@ -56,7 +56,7 @@ function toCard(k: Pick, span: 1 | 2, start?: Card['start']): Card {
   return {
     title: k.project.title,
     text: k.project.summary,
-    meta: [categoryLabel(k.project.category).toUpperCase(), city(k.project).toUpperCase(), String(k.project.year)],
+    meta: [categoryLabel(k.project.category).toUpperCase(), city(k.project).toUpperCase(), String(k.project.year)].filter(Boolean),
     image: k.src,
     alt: k.alt,
     href: `/projects/${k.project.slug}`,

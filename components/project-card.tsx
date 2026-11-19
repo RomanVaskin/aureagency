@@ -29,7 +29,7 @@ export function ProjectCard({
       <div className="mt-3 flex items-baseline justify-between gap-4 text-[13px] leading-snug">
         <span className="underline-offset-4 group-hover:underline">{project.title}</span>
         <span className="shrink-0 text-muted-foreground">
-          {project.location.split(',')[0]}, {project.year}
+          {[project.location.split(',')[0], project.year].filter(Boolean).join(', ')}
         </span>
       </div>
     </Link>

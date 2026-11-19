@@ -11,6 +11,7 @@ const ASPECT: Record<Ratio, string> = {
   '16/9': 'aspect-[16/9]',
   '1/1': 'aspect-square',
   '2/3': 'aspect-[2/3]',
+  '3/1': 'aspect-[3/1]',
 }
 /** Те же рамки, но только с планшета: на телефоне фото идёт в своих пропорциях */
 const MD_ASPECT: Record<Ratio, string> = {
@@ -19,6 +20,7 @@ const MD_ASPECT: Record<Ratio, string> = {
   '16/9': 'md:aspect-[16/9]',
   '1/1': 'md:aspect-square',
   '2/3': 'md:aspect-[2/3]',
+  '3/1': 'md:aspect-[3/1]',
 }
 
 

@@ -34,6 +34,39 @@ interior design studio, long oak table with material samples — stone, wood, li
 flat lay close-up of interior material samples: travertine, oak veneer, linen fabric, lime plaster, brass, arranged on a plaster surface, soft side light, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
 ```
 
+## Дзен-спа
+Коммерческие помещения ·  · 2025
+
+### Обложка — Лобби: стойка из природного камня, зона ожидания и живые деревья
+Файл: `public/photos/dzen-spa-01.jpg` · 16/9
+```
+zen spa lobby with a rough stone reception desk, low boucle seating around a stone table, bonsai and maple trees, shoji screens, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 16:9
+```
+
+### Массажная: стол у окна-сёдзи, тёмное дерево и камень
+Файл: `public/photos/dzen-spa-02.jpg` · 3/2
+```
+massage room with a wooden massage table by a shoji window, dark wood cabinetry, stone wall, soft daylight, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
+```
+
+### Онсэн: деревянная купель на каменном подиуме у панорамного окна
+Файл: `public/photos/dzen-spa-03.jpg` · 3/2
+```
+japanese onsen with a round wooden hot tub on a stone platform, steam, panoramic window to a bamboo garden, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
+```
+
+### Вход: каменная стойка и вид на сад
+Файл: `public/photos/dzen-spa-04.jpg` · 3/1
+```
+spa entrance with a rough stone counter, wooden slats, bench and a red maple by the glazed doors, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:1
+```
+
+### Санузел: каменная столешница с раковинами и дерево
+Файл: `public/photos/dzen-spa-05.jpg` · 3/1
+```
+spa restroom with a long stone vanity, two stone basins, round mirrors and dark wood partitions, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:1
+```
+
 ## Апартаменты в Сербии
 Квартиры · Белград, Сербия · 2025
 
@@ -302,33 +335,6 @@ pottery workshop seen through a glass partition, potter wheels, oak work tables,
 Файл: `public/photos/shourum-glina-04.jpg` · 4/5
 ```
 oak and stainless steel shelving with rows of handmade ceramic cups and plates, clay-toned plaster wall, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
-```
-
-## Спа «Красная Поляна»
-Коммерческие помещения · Сочи, Красная Поляна · 2025
-
-### Обложка — Бассейн с видом на горный хребет
-Файл: `public/photos/spa-krasnaya-polyana-01.jpg` · 3/2
-```
-indoor spa pool clad in pale limestone mosaic, panoramic window onto a mountain ridge, linen loungers, calm water reflections, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
-```
-
-### Хаммам из каменной мозаики
-Файл: `public/photos/spa-krasnaya-polyana-02.jpg` · 4/5
-```
-hammam with pale stone mosaic, heated stone bench, domed ceiling with small round skylights, steam, soft light, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
-```
-
-### Зона отдыха из термососны
-Файл: `public/photos/spa-krasnaya-polyana-03.jpg` · 3/2
-```
-spa relaxation room with thermo-pine slatted walls, low daybeds with linen, terracotta vessels, view of mountains, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 3:2
-```
-
-### Сауна с панорамным окном
-Файл: `public/photos/spa-krasnaya-polyana-04.jpg` · 4/5
-```
-sauna with thermo-pine benches and a panoramic window to snowy mountains, soft minimalist interior, calm and quiet atmosphere, diffused natural daylight, muted warm-neutral palette of off-white, sand, greige and charcoal, natural materials, editorial architectural photography, medium format camera, 35mm lens, eye-level, straight verticals, no people, no text, photorealistic --ar 4:5
 ```
 
 ## Офис «Линия»
