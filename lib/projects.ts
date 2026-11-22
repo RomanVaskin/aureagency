@@ -62,6 +62,26 @@ const img = (slug: string, n: number, ratio: Ratio, alt: string, scene: string):
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'rekonstruktsiya-restorana',
+    title: 'Реконструкция ресторана',
+    category: 'commercial',
+    location: '',
+    year: '',
+    area: '',
+    status: '',
+    summary: 'Проект реконструкции ресторана.',
+    description: [],
+    materials: [],
+    tone: 0,
+    images: [
+      { src: '/photos/1 (3).JPG', alt: 'Реконструкция ресторана — обложка', ratio: '16/9', prompt: '' },
+      { src: '/photos/2 (1).JPG', alt: 'Реконструкция ресторана — фото 2', ratio: '3/2', prompt: '' },
+      { src: '/photos/3 (1).JPG', alt: 'Реконструкция ресторана — фото 3', ratio: '3/2', prompt: '' },
+      { src: '/photos/4 (1).JPG', alt: 'Реконструкция ресторана — фото 4', ratio: '3/2', prompt: '' },
+      { src: '/photos/5.JPG', alt: 'Реконструкция ресторана — фото 5', ratio: '3/2', prompt: '' },
+    ],
+  },
+  {
     slug: 'penthaus-vorobevy-gory',
     title: 'Пентхаус Воробьевы горы',
     category: 'apartments',
