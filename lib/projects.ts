@@ -36,9 +36,9 @@ export type Project = {
   title: string
   category: Category
   location: string
-  year: number
+  year: number | ''
   area: string
-  status: 'Реализован' | 'В работе'
+  status: 'Реализован' | 'В работе' | ''
   /** Одна строка под карточкой и в начале страницы проекта */
   summary: string
   description: string[]
@@ -61,6 +61,27 @@ const img = (slug: string, n: number, ratio: Ratio, alt: string, scene: string):
 })
 
 export const PROJECTS: Project[] = [
+  {
+    slug: 'penthaus-vorobevy-gory',
+    title: 'Пентхаус Воробьевы горы',
+    category: 'apartments',
+    location: 'Москва',
+    year: '',
+    area: '',
+    status: '',
+    summary: 'Пентхаус на Воробьёвых горах.',
+    description: [],
+    materials: [],
+    tone: 0,
+    images: [
+      { src: '/photos/1 (2).JPG', alt: 'Пентхаус Воробьевы горы — обложка', ratio: '16/9', prompt: '' },
+      { src: '/photos/2.JPG', alt: 'Пентхаус Воробьевы горы — фото 2', ratio: '3/2', prompt: '' },
+      { src: '/photos/3.JPG', alt: 'Пентхаус Воробьевы горы — фото 3', ratio: '3/2', prompt: '' },
+      { src: '/photos/4.JPG', alt: 'Пентхаус Воробьевы горы — фото 4', ratio: '3/2', prompt: '' },
+      { src: '/photos/_.png', alt: 'Пентхаус Воробьевы горы — фото 5', ratio: '3/2', prompt: '' },
+      { src: '/photos/2953D9B2-E084-4EF1-8D07-41F8E7305BF4.JPG', alt: 'Пентхаус Воробьевы горы — фото 6', ratio: '3/2', prompt: '' },
+    ],
+  },
   {
     slug: 'dzen-spa',
     title: 'Дзен-спа в японском стиле',
@@ -313,6 +334,7 @@ const SCENES: Record<string, [Ratio, string, string][]> = {
 }
 
 for (const p of PROJECTS) {
+  if (p.images.length > 0) continue
   p.images = (SCENES[p.slug] ?? []).map(([ratio, alt, scene], i) => img(p.slug, i + 1, ratio, alt, scene))
 }
 
