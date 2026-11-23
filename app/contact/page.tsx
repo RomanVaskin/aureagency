@@ -27,10 +27,10 @@ export default function ContactPage() {
           className="lg:pt-[calc(var(--site-header-height)+1.5rem)]"
           titleClassName="text-[21px] leading-[1.25] md:text-[30px] md:leading-[1.2] lg:max-w-4xl lg:text-[28px]"
         >
-          Расскажите о своём проекте - площадь, место и сроки. Мы ответим в течение рабочего дня.
+          Расскажите о своём проекте - площадь, локацию и сроки. Мы ответим в течение рабочего дня.
         </PageIntro>
 
-        <section className="mx-auto max-w-[1600px] px-5 pt-16 md:px-10 md:pt-28 lg:pt-12">
+        <section className="mx-auto max-w-[1600px] px-5 pt-8 md:px-10 md:pt-28 lg:pt-12">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-start lg:gap-16">
             <dl className="border-t border-border">
               {rows.map((r) => (
