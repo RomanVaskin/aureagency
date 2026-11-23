@@ -6,8 +6,8 @@ import { HOME_PICKS, type Block, type Card, type Slide } from './home'
  * Подборка для главной из раздела «Проекты»:
  *  • только проекты, у которых уже лежат настоящие фото (заглушки не берутся);
  *  • главная карусель — по одному кадру от каждого такого проекта;
- *  • лента «Последние работы» — другой кадр тех же проектов, ни один снимок
- *    на странице не повторяется;
+ *  • лента «Последние работы» — другой кадр тех же проектов по умолчанию;
+ *    одинаковые номера в HOME_PICKS разрешают повтор кадра;
  *  • кадры — из HOME_PICKS, иначе обложка (карусель) и следующее фото (лента).
  * Новый проект с фото появляется на главной сам, без правки этой страницы.
  */
@@ -38,7 +38,8 @@ function picks(): { hero: Pick[]; grid: Pick[] } {
     const g =
       photoAt(project, want?.grid) ??
       project.images.map((_, i) => photoAt(project, i + 1)).find((im) => im && im.src !== h.src)
-    if (g && !used.has(g.src)) {
+    const samePhotoRequested = want?.grid !== undefined && want.grid === want.hero
+    if (g && (!used.has(g.src) || (samePhotoRequested && g.src === h.src))) {
       used.add(g.src)
       grid.push({ project, src: g.src, alt: g.alt, ratio: g.ratio, position: want?.gridPosition })
     }
