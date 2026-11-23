@@ -21,7 +21,7 @@ export function ProcessTimeline({
   steps: { title: string; text: string }[]
 }) {
   return (
-    <section className="dusk-block mt-28 md:mt-48">
+    <section className="dusk-block mt-14 md:mt-20">
       <div className="mx-auto max-w-[1600px] px-10 py-10 md:px-24 md:py-16">
         <Reveal>
           <h2 className="text-[13px] text-white/75">{label}</h2>
