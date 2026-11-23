@@ -34,7 +34,7 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-start lg:gap-16">
             <section aria-labelledby="contact-details-title">
               <h2 id="contact-details-title" className="text-[22px] font-light">Связаться с нами</h2>
-              <dl className="mt-4 border-t border-border">
+              <dl className="mt-4 border-t border-border lg:mt-7">
                 {rows.map((r) => (
                   <div key={r.k} className="grid gap-1 border-b border-border py-6 md:grid-cols-12 md:gap-8 md:py-8 lg:py-4">
                     <dt className="text-[15px] text-muted-foreground md:col-span-3 md:self-center lg:text-[14px]">{r.k}</dt>
