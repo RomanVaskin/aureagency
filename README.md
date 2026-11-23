@@ -26,6 +26,14 @@ node --experimental-strip-types scripts/photo-guide.ts
 node --experimental-strip-types scripts/image-prompts.ts > docs/image-prompts.md
 ```
 
+## Заявки с сайта
+
+Форма на странице «Контакты» сохраняет каждую заявку отдельным JSON-файлом
+в `.contact-requests/` на сервере, вне публичной папки и Git.
+Папка создаётся от имени процесса Next.js. Для другого постоянного каталога
+задайте `CONTACT_REQUESTS_DIR` и предоставьте процессу право записи.
+Заявки доступны администратору сервера. Уведомления не отправляются.
+
 ## Деплой
 
 Каждый pull request в `main` собирается и выкладывается на preview.aureagency.ru

@@ -19,3 +19,6 @@ node_modules
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Private contact form submissions
+/.contact-requests/
