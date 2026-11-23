@@ -15,7 +15,7 @@ export type PriceItem = {
 export type PriceTab = {
   id: string
   title: string
-  lead: string
+  lead?: string
   items: PriceItem[]
   details?: { title: string; scope: string[]; duration: string; price: string }
 }
@@ -24,7 +24,6 @@ export const PRICE_TABS: PriceTab[] = [
   {
     id: 'design',
     title: 'Дизайн-проект',
-    lead: 'Планировочные решения, концепция, визуализации и полный комплект рабочих чертежей.',
     items: [],
     details: {
       title: 'Состав дизайн-проекта',
