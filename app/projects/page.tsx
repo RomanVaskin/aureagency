@@ -6,6 +6,16 @@ import { ProjectsFilter } from '@/components/projects-filter'
 import { findPhoto } from '@/lib/photo'
 import { CATEGORIES, PROJECTS } from '@/lib/projects'
 
+const PROJECT_ORDER = [
+  'restoran-leningradskaya-oblast',
+  'apartamenty-serbiya',
+  'rekonstruktsiya-restorana',
+  'kvartira-na-patriarshih',
+  'dzen-spa',
+  'penthaus-vorobevy-gory',
+]
+const projectRank = new Map(PROJECT_ORDER.map((slug, index) => [slug, index]))
+
 export const metadata: Metadata = {
   title: 'Проекты — EOS Bureau',
   description: 'Коммерческие помещения, частные дома и квартиры — проекты студии EOS Bureau.',
@@ -13,7 +23,9 @@ export const metadata: Metadata = {
 }
 
 export default function ProjectsPage() {
-  const projectsWithCovers = PROJECTS.filter(({ images: [cover] }) => cover && findPhoto(cover.src))
+  const projectsWithCovers = PROJECTS
+    .filter(({ images: [cover] }) => cover && findPhoto(cover.src))
+    .sort((a, b) => (projectRank.get(a.slug) ?? PROJECT_ORDER.length) - (projectRank.get(b.slug) ?? PROJECT_ORDER.length))
   const items = projectsWithCovers.map((p, i) => ({
     key: p.slug,
     category: p.category,
