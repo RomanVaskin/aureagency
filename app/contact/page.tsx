@@ -31,7 +31,7 @@ export default function ContactPage() {
         </PageIntro>
 
         <section className="mx-auto max-w-[1600px] px-5 pt-16 md:px-10 md:pt-28 lg:pt-12">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-start lg:gap-16">
+          <div className="grid gap-10 lg:gap-8">
             <dl className="border-t border-border">
               {rows.map((r) => (
                 <div key={r.k} className="grid gap-1 border-b border-border py-6 md:grid-cols-12 md:gap-8 md:py-8 lg:py-4">
