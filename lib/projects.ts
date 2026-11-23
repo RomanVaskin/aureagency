@@ -99,7 +99,6 @@ export const PROJECTS: Project[] = [
       { src: '/photos/3.JPG', alt: 'Пентхаус Воробьевы горы — фото 3', ratio: '3/2', prompt: '' },
       { src: '/photos/4.JPG', alt: 'Пентхаус Воробьевы горы — фото 4', ratio: '3/2', prompt: '' },
       { src: '/photos/_.png', alt: 'Пентхаус Воробьевы горы — фото 5', ratio: '3/2', prompt: '' },
-      { src: '/photos/2953D9B2-E084-4EF1-8D07-41F8E7305BF4.JPG', alt: 'Пентхаус Воробьевы горы — фото 6', ratio: '3/2', prompt: '' },
     ],
   },
   {
