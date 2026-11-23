@@ -17,7 +17,7 @@ export type PriceTab = {
   title: string
   lead?: string
   items: PriceItem[]
-  details?: { title: string; scope: { title: string; includes?: { title: string; items: string[] } }[]; duration: string; price: string }
+  details?: { title: string; scope: { title: string; includes?: { title: string; items: string[] } }[]; duration?: string; price?: string }
 }
 
 export const PRICE_TABS: PriceTab[] = [
@@ -68,7 +68,20 @@ export const PRICE_TABS: PriceTab[] = [
   {
     id: 'supervision',
     title: 'Авторский надзор',
-    lead: 'Контроль хода работ, качества исполнения и соответствия проектным решениям.',
     items: [],
+    details: {
+      title: 'Авторский надзор включает',
+      scope: [
+        { title: 'Контроль соответствия ремонтных работ дизайн-проекту' },
+        { title: 'Регулярные выезды на объект' },
+        { title: 'Консультации и взаимодействие со строительной бригадой' },
+        { title: 'Контроль реализации сложных узлов и дизайнерских решений' },
+        { title: 'Корректировка проекта при необходимости' },
+        { title: 'Согласование образцов отделочных материалов и мебели' },
+        { title: 'Контроль соответствия мебели, освещения, сантехники и декора дизайн-проекту' },
+        { title: 'Решение вопросов, возникающих в процессе реализации интерьера' },
+        { title: 'Организация закупки в соответствии с проектом' },
+      ],
+    },
   },
 ]
