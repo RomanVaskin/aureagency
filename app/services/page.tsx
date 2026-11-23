@@ -25,6 +25,7 @@ export default function ServicesPage() {
       <main className="font-primary">
         {/* фраза набрана мелко, как основной текст страницы */}
         <PageIntro
+          className="pt-[calc(var(--site-header-height)+1rem)]! md:pt-[calc(var(--site-header-height)+1.25rem)]!"
           titleClassName="max-w-[560px] text-[15px] leading-[1.6] tracking-normal md:text-[18px]"
           action={
             <Link
@@ -39,9 +40,9 @@ export default function ServicesPage() {
         </PageIntro>
 
         {/* Стоимость: две вкладки, список услуг — в lib/pricing.ts */}
-        <section className="pt-14 md:pt-20">
+        <section className="pt-7 md:pt-10">
           <h2 className="mx-auto max-w-[1600px] px-5 text-[13px] text-muted-foreground md:px-10">Стоимость</h2>
-          <div className="dusk-block mt-6 md:mt-8">
+          <div className="dusk-block mt-3 md:mt-4">
             <div className="mx-auto max-w-[1600px] px-5 md:px-10">
               <PriceTabs tabs={PRICE_TABS} />
             </div>
@@ -60,8 +61,8 @@ export default function ServicesPage() {
           steps={STEPS.map(([, title, text]) => ({ title, text }))}
         />
 
-        <section className="mx-auto max-w-[1600px] px-5 pt-14 md:px-10 md:pt-20">
-          <Link href="/contact" className="group block border-t border-border pt-8">
+        <section className="mx-auto max-w-[1600px] px-5 pt-7 md:px-10 md:pt-10">
+          <Link href="/contact" className="group block border-t border-border pt-4">
             <span className="text-[13px] text-muted-foreground">Есть проект?</span>
             <span className={`mt-3 block font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 ${HEADING_SIZE}`}>
               Напишите нам →
@@ -69,7 +70,7 @@ export default function ServicesPage() {
           </Link>
         </section>
       </main>
-      <SiteFooter />
+      <SiteFooter topSpacing="pt-14 md:pt-22" />
     </>
   )
 }
