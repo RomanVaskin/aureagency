@@ -86,7 +86,7 @@ export function SiteHeader() {
       {open && (
         <nav aria-label="Мобильное меню" className="h-[calc(100dvh-var(--site-header-height))] overflow-y-auto bg-background px-5 pt-8 text-foreground lg:hidden">
           {NAV.map((item) => (
-            <a key={item.label} href={item.href} className="mobile-menu-link block py-3 text-[22px] font-light uppercase tracking-[0.5px]">
+            <a key={item.label} href={item.href} className="mobile-menu-link block py-3 text-[18px] font-light uppercase tracking-[0.5px]">
               {item.label}
             </a>
           ))}
