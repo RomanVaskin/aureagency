@@ -3,6 +3,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { PageIntro } from '@/components/page-intro'
 import { ProjectCard } from '@/components/project-card'
 import { ProjectsFilter } from '@/components/projects-filter'
+import { findPhoto } from '@/lib/photo'
 import { CATEGORIES, PROJECTS } from '@/lib/projects'
 
 export const metadata: Metadata = {
@@ -12,7 +13,8 @@ export const metadata: Metadata = {
 }
 
 export default function ProjectsPage() {
-  const items = PROJECTS.map((p, i) => ({
+  const projectsWithCovers = PROJECTS.filter(({ images: [cover] }) => cover && findPhoto(cover.src))
+  const items = projectsWithCovers.map((p, i) => ({
     key: p.slug,
     category: p.category,
     node: <ProjectCard project={p} ratio="4/5" variant={i} priority={i < 3} />,
