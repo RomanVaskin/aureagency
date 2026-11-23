@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { PageIntro } from '@/components/page-intro'
 import { ProjectCard } from '@/components/project-card'
@@ -21,7 +20,6 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <SiteHeader />
       <main className="font-primary">
         <PageIntro>
           Создаём пространства, в которых эстетика встречается с функциональностью, а архитектура становится

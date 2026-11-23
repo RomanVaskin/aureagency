@@ -36,7 +36,7 @@ export function HeroSlider({
       {slides.map((s, k) => (
         <div
           key={s.key}
-          className={`absolute inset-x-0 bottom-0 top-[72px] transition-opacity duration-[1200ms] ease-out md:top-[110px] ${k === i ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-x-0 bottom-0 top-[var(--site-header-height)] transition-opacity duration-[1200ms] ease-out ${k === i ? 'opacity-100' : 'opacity-0'}`}
           aria-hidden={k !== i}
         >
           {s.media}

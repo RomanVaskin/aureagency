@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { HeroSlider } from '@/components/home/hero-slider'
 import { WorkSection } from '@/components/home/work-section'
@@ -20,7 +19,6 @@ export default function Page() {
   let tone = 0
   return (
     <>
-      <SiteHeader overlay />
       <main>
         <HeroSlider
           slides={slides.map((s, i) => ({

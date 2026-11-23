@@ -20,7 +20,7 @@ export function PageIntro({
   action?: ReactNode
 }) {
   return (
-    <section className="mx-auto max-w-[1600px] px-5 pt-32 md:px-10 md:pt-44">
+    <section className="mx-auto max-w-[1600px] px-5 pt-[calc(var(--site-header-height)+2rem)] md:px-10 md:pt-[calc(var(--site-header-height)+2.5rem)]">
       {label && <p className="mb-6 text-[13px] text-muted-foreground">{label}</p>}
       <h1 className={`font-light tracking-[-0.02em] ${titleClassName}`}>
         {children}
