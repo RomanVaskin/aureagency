@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteFooter } from '@/components/site-footer'
-import { HEADING_SIZE, PageIntro } from '@/components/page-intro'
+import { PageIntro } from '@/components/page-intro'
 import { ProcessTimeline } from '@/components/process-timeline'
 import { PriceTabs } from '@/components/price-tabs'
 import { PRICE_TABS } from '@/lib/pricing'
@@ -63,16 +63,16 @@ export default function ServicesPage() {
           steps={STEPS.map(([, title, text]) => ({ title, text }))}
         />
 
-        <section className="mx-auto max-w-[1600px] px-5 pt-7 md:px-10 md:pt-10">
-          <Link href="/contact" className="group block border-t border-border pt-4">
+        <section className="mx-auto max-w-[1600px] px-5 pt-4 md:px-10 md:pt-6">
+          <Link href="/contact" className="group flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-border py-4 md:py-5">
             <span className="text-[13px] text-muted-foreground">Есть проект?</span>
-            <span className={`mt-3 block font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 ${HEADING_SIZE}`}>
+            <span className="text-[21px] font-light tracking-[-0.02em] underline-offset-4 group-hover:underline md:text-[26px]">
               Напишите нам →
             </span>
           </Link>
         </section>
       </main>
-      <SiteFooter topSpacing="pt-14 md:pt-22" />
+      <SiteFooter topSpacing="pt-7 md:pt-9" copyrightSpacing="mt-8 md:mt-10" />
     </>
   )
 }
