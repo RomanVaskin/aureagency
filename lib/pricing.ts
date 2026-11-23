@@ -17,7 +17,7 @@ export type PriceTab = {
   title: string
   lead?: string
   items: PriceItem[]
-  details?: { title: string; scope: { title: string; includes?: { title: string; items: string[] } }[]; duration?: string; price?: string }
+  details?: { title: string; scope: { title: string; includes?: { title: string; items: string[] } }[]; duration?: string; price?: string; priceNote?: string }
 }
 
 export const PRICE_TABS: PriceTab[] = [
@@ -82,6 +82,8 @@ export const PRICE_TABS: PriceTab[] = [
         { title: 'Решение вопросов, возникающих в процессе реализации интерьера' },
         { title: 'Организация закупки в соответствии с проектом' },
       ],
+      price: 'от 60 000 руб./месяц',
+      priceNote: 'Срок сопровождения — на период реализации дизайн-проекта.',
     },
   },
 ]
