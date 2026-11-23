@@ -26,7 +26,7 @@ export default function ServicesPage() {
         {/* фраза набрана мелко, как основной текст страницы */}
         <PageIntro
           className="pt-[calc(var(--site-header-height)+1rem)]! md:pt-[calc(var(--site-header-height)+1.25rem)]!"
-          titleClassName="max-w-[560px] text-[15px] leading-[1.6] tracking-normal md:text-[18px]"
+          titleClassName="max-w-[680px] text-[21px] leading-[1.6] tracking-normal md:text-[24px]"
           action={
             <Link
               href="/contact"

@@ -47,17 +47,23 @@ function picks(): { hero: Pick[]; grid: Pick[] } {
   return { hero, grid }
 }
 
-const city = (p: Project) => p.location.split(',')[0]
+const homeCardFacts: Record<string, { location: string; year?: number }> = {
+  'dzen-spa': { location: 'Ленинградская область' },
+  'rekonstruktsiya-restorana': { location: 'Санкт-Петербург', year: 2026 },
+}
 
 function toSlide(k: Pick): Slide {
   return { title: k.project.title, text: k.project.summary, image: k.src, href: `/projects/${k.project.slug}`, position: k.position }
 }
 
 function toCard(k: Pick, span: 1 | 2, start?: Card['start']): Card {
+  const facts = homeCardFacts[k.project.slug]
+  const location = facts?.location ?? k.project.location.split(',')[0]
+  const year = facts?.year ?? k.project.year
   return {
     title: k.project.title,
     text: k.project.summary,
-    meta: [categoryLabel(k.project.category).toUpperCase(), city(k.project).toUpperCase(), String(k.project.year)].filter(Boolean),
+    meta: [categoryLabel(k.project.category).toUpperCase(), location.toUpperCase(), String(year)].filter(Boolean),
     image: k.src,
     alt: k.alt,
     href: `/projects/${k.project.slug}`,
