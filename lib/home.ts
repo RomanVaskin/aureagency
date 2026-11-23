@@ -45,4 +45,6 @@ export const HOME_PICKS: Record<string, HomePick> = {
   'kvartira-na-patriarshih': { hero: 1, heroPosition: '50% 60%', grid: 6 },
   // столовая с люстрой-облаком / зона отдыха: бархат, камень, подсветка
   'apartamenty-serbiya': { hero: 1, heroPosition: '50% 50%', grid: 3, gridPosition: '50% 45%' },
+  'rekonstruktsiya-restorana': { hero: 1, grid: 2 },
+  'penthaus-vorobevy-gory': { hero: 2, grid: 1 },
 }
