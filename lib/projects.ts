@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     title: 'Пентхаус Воробьевы горы',
     category: 'apartments',
     location: 'Москва',
-    year: '',
+    year: 2020,
     area: '',
     status: '',
     summary: 'Пентхаус на Воробьёвых горах.',
