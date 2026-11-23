@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { PageIntro } from '@/components/page-intro'
 import { CITY, EMAIL, PHONE, PHONE_HREF, TELEGRAM_URL, WHATSAPP_URL } from '@/lib/contacts'
@@ -22,7 +21,6 @@ export default function ContactPage() {
   return (
     // Фон как у первого слайда на главной; светлая шапка и текст (см. .page-dusk в globals.css)
     <div className="page-dusk" data-header="light">
-      <SiteHeader />
       <main className="font-primary">
         <PageIntro>
           Расскажите о своём проекте - площадь, место и сроки. Мы ответим в течение рабочего дня.

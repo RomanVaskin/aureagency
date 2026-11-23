@@ -11,63 +11,45 @@ export const NAV = [
   { label: 'Контакты', href: '/contact' },
 ]
 
-/**
- * Шапка как в образце: логотип слева, меню капслоком по центру, поиск справа.
- * Над полноэкранными кадрами и тёмными страницами (секции с data-header="light") —
- * сплошная серая плашка #6f665b с белым текстом, фото начинается под ней;
- * тёмная на кремовом фоне. При прокрутке вниз прячется, при прокрутке вверх
- * появляется снова — уже на кремовой подложке, если под ней не фото.
- * overlay — страница начинается с полноэкранного кадра (главная).
- */
-export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
+export function SiteHeader() {
   const pathname = usePathname()
-  const [onImage, setOnImage] = useState(overlay)
   const [hidden, setHidden] = useState(false)
-  const [atTop, setAtTop] = useState(true)
   const [open, setOpen] = useState(false)
 
   useEffect(() => setOpen(false), [pathname])
 
   useEffect(() => {
+    setHidden(false)
     let lastY = window.scrollY
     let raf = 0
     const update = () => {
       raf = 0
       const y = window.scrollY
-      setAtTop(y < 10)
       if (Math.abs(y - lastY) > 4) {
         setHidden(y > lastY && y > 120)
         lastY = y
       }
-      // что сейчас под шапкой
-      const el = document.elementsFromPoint(window.innerWidth / 2, 40).find((n) => n.closest('[data-header]'))
-      setOnImage(el?.closest('[data-header]')?.getAttribute('data-header') === 'light')
     }
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update)
     }
     update()
     window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onScroll)
     return () => {
       window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onScroll)
       if (raf) cancelAnimationFrame(raf)
     }
   }, [pathname])
 
-  const light = onImage && !open
-  const solid = !light && (!atTop || open)
-
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[transform,background-color,color] duration-500 ease-out ${
+      className={`fixed inset-x-0 top-0 z-50 bg-[#6f665b] text-white transition-transform duration-500 ease-out ${
         hidden && !open ? '-translate-y-full' : 'translate-y-0'
-      } ${light ? 'bg-[#6f665b]' : solid ? 'bg-background' : 'bg-transparent'} ${light ? 'text-white' : 'text-foreground'}`}
+      }`}
     >
-      <div className="relative flex h-[72px] items-center justify-between px-5 md:h-[110px] md:px-[2.7vw]">
+      <div className="relative flex h-[var(--site-header-height)] items-center justify-between px-5 md:px-[2.7vw]">
         <a href="/" aria-label="EOS Bureau — на главную" className="relative z-10">
-          <Logo height={15} light={light} />
+          <Logo height={15} />
         </a>
 
         <nav aria-label="Основное меню" className="absolute inset-x-0 hidden justify-center gap-[3.5vw] lg:flex">
@@ -102,7 +84,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
       </div>
 
       {open && (
-        <nav aria-label="Мобильное меню" className="h-[calc(100dvh-72px)] bg-background px-5 pt-8 lg:hidden">
+        <nav aria-label="Мобильное меню" className="h-[calc(100dvh-var(--site-header-height))] overflow-y-auto bg-background px-5 pt-8 text-foreground lg:hidden">
           {NAV.map((item) => (
             <a key={item.label} href={item.href} className="mobile-menu-link block py-3 text-[22px] font-light uppercase tracking-[0.5px]">
               {item.label}

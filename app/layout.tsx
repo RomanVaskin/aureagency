@@ -1,3 +1,4 @@
+import { SiteHeader } from '@/components/site-header'
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Geist_Mono, Inter, Jost } from 'next/font/google'
@@ -55,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`light bg-background ${geistMono.variable} ${jost.variable} ${cormorant.variable} ${inter.variable}`}>
       <body className="antialiased font-sans">
+        <SiteHeader />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

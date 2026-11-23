@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { HEADING_SIZE, PageIntro } from '@/components/page-intro'
 import { ProcessTimeline } from '@/components/process-timeline'
@@ -30,7 +29,6 @@ const STEPS = [
 export default function ServicesPage() {
   return (
     <>
-      <SiteHeader />
       <main className="font-primary">
         {/* фраза набрана мелко, как основной текст страницы */}
         <PageIntro

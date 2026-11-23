@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { ProjectImage } from '@/components/project-image'
 import { Reveal } from '@/components/reveal'
@@ -39,9 +38,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <SiteHeader />
       <main className="font-primary">
-        <section className="mx-auto max-w-[1600px] px-5 pt-32 md:px-10 md:pt-44">
+        <section className="mx-auto max-w-[1600px] px-5 pt-[calc(var(--site-header-height)+2rem)] md:px-10 md:pt-[calc(var(--site-header-height)+2.5rem)]">
           <Link href="/projects" className="text-[13px] text-muted-foreground hover:text-foreground">
             ← Проекты
           </Link>
