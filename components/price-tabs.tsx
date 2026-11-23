@@ -46,7 +46,22 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
           <div className="mt-8 space-y-3 border-t border-white/20 pt-6 text-[15px] leading-relaxed text-white/75 md:mt-10">
             <h3 className={detailsHeading}>{tab.details.title}</h3>
             <ul className="list-disc space-y-1 pl-5">
-              {tab.details.scope.map((item) => <li key={item}>{item}</li>)}
+              {tab.details.scope.map(({ title, includes }) => (
+                <li key={title}>
+                  {includes ? (
+                    <details className="group">
+                      <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [&::-webkit-details-marker]:hidden">
+                        <span>{title}</span>
+                        <span aria-hidden="true" className="group-open:hidden">+</span>
+                        <span aria-hidden="true" className="hidden group-open:inline">−</span>
+                      </summary>
+                      <ul className="mb-3 list-disc space-y-1 pl-5">
+                        {includes.map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    </details>
+                  ) : title}
+                </li>
+              ))}
             </ul>
             <p><span className={detailsHeading}>Сроки</span> — {tab.details.duration}</p>
             <p><span className={detailsHeading}>Стоимость</span> — {tab.details.price}</p>
