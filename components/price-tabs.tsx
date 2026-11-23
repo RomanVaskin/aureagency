@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import type { PriceTab } from '@/lib/pricing'
 
+const detailsHeading = 'text-[18px] font-normal text-white md:text-[22px]'
+
 /**
  * Прямоугольный блок с фоном слайдера главной (.dusk-block в globals.css):
  * две колонки-вкладки сверху, под ними описание и список услуг выбранной вкладки.
@@ -42,12 +44,12 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
 
         {tab.details && (
           <div className="mt-8 space-y-3 border-t border-white/20 pt-6 text-[15px] leading-relaxed text-white/75 md:mt-10">
-            <h3 className="font-normal text-white">{tab.details.title}</h3>
+            <h3 className={detailsHeading}>{tab.details.title}</h3>
             <ul className="list-disc space-y-1 pl-5">
               {tab.details.scope.map((item) => <li key={item}>{item}</li>)}
             </ul>
-            <p>Сроки — {tab.details.duration}</p>
-            <p>Стоимость — {tab.details.price}</p>
+            <p><span className={detailsHeading}>Сроки</span> — {tab.details.duration}</p>
+            <p><span className={detailsHeading}>Стоимость</span> — {tab.details.price}</p>
           </div>
         )}
 
