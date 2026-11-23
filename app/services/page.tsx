@@ -39,9 +39,9 @@ export default function ServicesPage() {
         </PageIntro>
 
         {/* Стоимость: две вкладки, список услуг — в lib/pricing.ts */}
-        <section className="pt-28 md:pt-48">
+        <section className="pt-14 md:pt-20">
           <h2 className="mx-auto max-w-[1600px] px-5 text-[13px] text-muted-foreground md:px-10">Стоимость</h2>
-          <div className="dusk-block mt-10">
+          <div className="dusk-block mt-6 md:mt-8">
             <div className="mx-auto max-w-[1600px] px-5 md:px-10">
               <PriceTabs tabs={PRICE_TABS} />
             </div>
@@ -60,7 +60,7 @@ export default function ServicesPage() {
           steps={STEPS.map(([, title, text]) => ({ title, text }))}
         />
 
-        <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
+        <section className="mx-auto max-w-[1600px] px-5 pt-14 md:px-10 md:pt-20">
           <Link href="/contact" className="group block border-t border-border pt-8">
             <span className="text-[13px] text-muted-foreground">Есть проект?</span>
             <span className={`mt-3 block font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 ${HEADING_SIZE}`}>
