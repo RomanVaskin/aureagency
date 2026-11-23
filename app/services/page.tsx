@@ -22,7 +22,7 @@ const STEPS = [
 export default function ServicesPage() {
   return (
     <>
-      <main className="font-primary">
+      <main className="font-primary [--services-cta-height:2.75rem]">
         {/* фраза набрана мелко, как основной текст страницы */}
         <PageIntro
           className="pt-[calc(var(--site-header-height)+1rem)]! md:pt-[calc(var(--site-header-height)+1.25rem)]!"
@@ -30,7 +30,7 @@ export default function ServicesPage() {
           action={
             <Link
               href="/contact"
-              className="inline-block rounded-full bg-foreground px-7 py-3 text-[13px] tracking-[0.02em] text-background transition-opacity hover:opacity-80"
+              className="inline-flex h-[var(--services-cta-height)] items-center rounded-full bg-foreground px-7 text-[13px] tracking-[0.02em] text-background transition-opacity hover:opacity-80"
             >
               Обсудить проект
             </Link>
@@ -48,6 +48,8 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
+
+        <div aria-hidden="true" className="h-[var(--services-cta-height)] bg-white" />
 
         <ProcessTimeline
           label="Как мы работаем"
