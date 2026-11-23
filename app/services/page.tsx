@@ -39,10 +39,12 @@ export default function ServicesPage() {
         </PageIntro>
 
         {/* Стоимость: две вкладки, список услуг — в lib/pricing.ts */}
-        <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
-          <h2 className="text-[13px] text-muted-foreground">Стоимость</h2>
-          <div className="mt-10">
-            <PriceTabs tabs={PRICE_TABS} />
+        <section className="pt-28 md:pt-48">
+          <h2 className="mx-auto max-w-[1600px] px-5 text-[13px] text-muted-foreground md:px-10">Стоимость</h2>
+          <div className="dusk-block mt-10">
+            <div className="mx-auto max-w-[1600px] px-5 md:px-10">
+              <PriceTabs tabs={PRICE_TABS} />
+            </div>
           </div>
         </section>
 
