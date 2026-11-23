@@ -6,7 +6,7 @@ import type { PriceTab } from '@/lib/pricing'
 const detailsHeading = 'text-[18px] font-normal text-white md:text-[22px]'
 
 /**
- * Прямоугольный блок с фоном слайдера главной (.dusk-block в globals.css):
+ * Блок стоимости внутри полноширинного фона:
  * две колонки-вкладки сверху, под ними описание и список услуг выбранной вкладки.
  */
 export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
@@ -14,7 +14,7 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
   const tab = tabs.find((t) => t.id === active) ?? tabs[0]
 
   return (
-    <div className="dusk-block px-5 py-10 md:px-14 md:py-16">
+    <div className="px-5 py-10 md:px-14 md:py-16">
       <div role="tablist" aria-label="Услуги" className="grid grid-cols-2 border-b border-white/25">
         {tabs.map((t) => {
           const on = t.id === tab.id
