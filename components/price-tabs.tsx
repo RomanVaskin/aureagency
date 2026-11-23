@@ -38,6 +38,17 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
       <div role="tabpanel" id={`panel-${tab.id}`} aria-labelledby={`tab-${tab.id}`} key={tab.id} className="fade-up">
         <p className="mt-8 max-w-[640px] text-[15px] leading-relaxed text-white/75 md:mt-10">{tab.lead}</p>
 
+        {tab.details && (
+          <div className="mt-8 space-y-3 border-t border-white/20 pt-6 text-[15px] leading-relaxed text-white/75 md:mt-10">
+            <h3 className="font-normal text-white">{tab.details.title}</h3>
+            <ul className="list-disc space-y-1 pl-5">
+              {tab.details.scope.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+            <p>Сроки — {tab.details.duration}</p>
+            <p>Стоимость — {tab.details.price}</p>
+          </div>
+        )}
+
         {tab.items.length > 0 ? (
           <ul className="mt-8 border-t border-white/20 md:mt-10">
             {tab.items.map((it) => (
@@ -50,7 +61,7 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
               </li>
             ))}
           </ul>
-        ) : (
+        ) : !tab.details && (
           <p className="mt-8 border-t border-white/20 pt-6 text-[14px] text-white/55 md:mt-10">
             Состав и стоимость скоро появятся
           </p>
