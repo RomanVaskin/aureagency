@@ -37,7 +37,8 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
         })}
       </div>
 
-      <div role="tabpanel" id={`panel-${tab.id}`} aria-labelledby={`tab-${tab.id}`} key={tab.id} className="fade-up">
+      <div role="tabpanel" id={`panel-${tab.id}`} aria-labelledby={`tab-${tab.id}`} key={tab.id}
+        className={`fade-up ${tab.id === 'supervision' ? 'md:ml-[50%]' : ''}`}>
         {tab.lead && (
           <p className="mt-8 max-w-[640px] text-[15px] leading-relaxed text-white/75 md:mt-10">{tab.lead}</p>
         )}
