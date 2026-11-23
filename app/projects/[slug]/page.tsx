@@ -33,7 +33,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     ['Место', p.location],
     ['Год', String(p.year)],
     ['Площадь', p.area],
-    ['Статус', p.status],
   ]
 
   return (
