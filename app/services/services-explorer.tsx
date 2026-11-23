@@ -62,7 +62,7 @@ function ServiceStages({ service }: { service: Service }) {
           const panel = `${id}-stage-${index}`
           return (
             <div key={stage.title} className="border-b border-border">
-              <h3>
+              <h4>
                 <button
                   type="button"
                   aria-expanded={open}
@@ -74,7 +74,7 @@ function ServiceStages({ service }: { service: Service }) {
                   <span className="min-w-0 flex-1">{stage.title}</span>
                   <Mark open={open} />
                 </button>
-              </h3>
+              </h4>
               <Disclosure id={panel} open={open}>
                 <div className={`space-y-3 pb-5 pt-1 ${body}`}>
                   {stage.description && <p>{stage.description}</p>}
@@ -174,7 +174,7 @@ export function ServicesExplorer() {
             tabIndex={0}
             className={`${styles.panel} ${focus} min-w-0`}
           >
-            <h2 className="mb-4 text-[32px] font-light tracking-[-0.02em]">{service.title}</h2>
+            <h3 className="mb-4 text-[32px] font-light tracking-[-0.02em]">{service.title}</h3>
             <ServiceStages service={service} />
           </div>
         ))}
@@ -186,7 +186,7 @@ export function ServicesExplorer() {
           const panel = `${id}-mobile-${service.id}`
           return (
             <div key={service.id} className="border-b border-border">
-              <h2>
+              <h3>
                 <button
                   type="button"
                   aria-controls={panel}
@@ -198,7 +198,7 @@ export function ServicesExplorer() {
                   <span className="min-w-0 flex-1">{service.title}</span>
                   <Mark open={open} />
                 </button>
-              </h2>
+              </h3>
               <Disclosure id={panel} open={open}>
                 <div className="pb-6 pt-2"><ServiceStages service={service} /></div>
               </Disclosure>
