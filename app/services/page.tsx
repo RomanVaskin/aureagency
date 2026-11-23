@@ -12,13 +12,6 @@ export const metadata: Metadata = {
   alternates: { canonical: '/services' },
 }
 
-const SERVICES = [
-  ['Архитектура', 'Частные дома и реконструкция: от концепции до рабочей документации.'],
-  ['Дизайн интерьера', 'Разрабатываем планировку и концепцию, создаём визуализации и полный рабочий проект.'],
-  ['Комплектация', 'Разрабатываем спецификации, подбираем поставщиков и организуем заказ всех элементов интерьера.'],
-  ['Авторский надзор', 'Контролируем ход работ, качество исполнения и соответствие проектным решениям.'],
-]
-
 const STEPS = [
   ['01', 'Знакомство', 'Знакомимся с объектом, проводим детальные обмеры и фиксируем особенности пространства. На основе полученных данных формируем основу будущего проекта.'],
   ['02', 'Концепция', 'Планировка, палитра материалов и настроение. Утверждаем направление до деталей.'],
@@ -44,20 +37,6 @@ export default function ServicesPage() {
         >
           Мы верим, что хороший интерьер не кричит. Он спокоен, удобен и с годами становится только лучше.
         </PageIntro>
-
-        <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
-          <h2 className="text-[13px] text-muted-foreground">Что мы делаем</h2>
-          <ul className="mt-10 border-t border-border">
-            {SERVICES.map(([t, d]) => (
-              <li key={t} className="grid gap-2 border-b border-border py-6 md:grid-cols-12 md:gap-8 md:py-8">
-                <span className="text-[21px] font-light tracking-[-0.02em] md:col-span-5 md:text-[32px]">{t}</span>
-                <span className="text-[15px] leading-relaxed text-muted-foreground md:col-span-5 md:col-start-8 md:self-center">
-                  {d}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
 
         {/* Стоимость: две вкладки, список услуг — в lib/pricing.ts */}
         <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
