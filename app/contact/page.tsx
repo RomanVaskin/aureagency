@@ -32,26 +32,29 @@ export default function ContactPage() {
 
         <section className="mx-auto max-w-[1600px] px-5 pt-8 md:px-10 md:pt-28 lg:pt-12">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-start lg:gap-16">
-            <dl className="border-t border-border">
-              {rows.map((r) => (
-                <div key={r.k} className="grid gap-1 border-b border-border py-6 md:grid-cols-12 md:gap-8 md:py-8 lg:py-4">
-                  <dt className="text-[15px] text-muted-foreground md:col-span-3 md:self-center lg:text-[14px]">{r.k}</dt>
-                  <dd className="text-[21px] font-light tracking-[-0.02em] md:col-span-9 md:text-[32px] lg:text-[22px]">
-                    {r.href ? (
-                      <a
-                        href={r.href}
-                        {...(r.ext ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                        className="underline-offset-[6px] hover:underline"
-                      >
-                        {r.v}
-                      </a>
-                    ) : (
-                      r.v
-                    )}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            <section aria-labelledby="contact-details-title">
+              <h2 id="contact-details-title" className="text-[22px] font-light">Связаться с нами</h2>
+              <dl className="mt-4 border-t border-border">
+                {rows.map((r) => (
+                  <div key={r.k} className="grid gap-1 border-b border-border py-6 md:grid-cols-12 md:gap-8 md:py-8 lg:py-4">
+                    <dt className="text-[15px] text-muted-foreground md:col-span-3 md:self-center lg:text-[14px]">{r.k}</dt>
+                    <dd className="text-[21px] font-light tracking-[-0.02em] md:col-span-9 md:text-[32px] lg:text-[22px]">
+                      {r.href ? (
+                        <a
+                          href={r.href}
+                          {...(r.ext ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                          className="underline-offset-[6px] hover:underline"
+                        >
+                          {r.v}
+                        </a>
+                      ) : (
+                        r.v
+                      )}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
             <ContactForm />
           </div>
         </section>
