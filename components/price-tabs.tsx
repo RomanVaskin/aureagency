@@ -68,6 +68,7 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
             </ul>
             {tab.details.duration && <p><span className={detailsHeading}>Сроки</span> — {tab.details.duration}</p>}
             {tab.details.price && <p><span className={detailsHeading}>Стоимость</span> — {tab.details.price}</p>}
+            {tab.details.priceNote && <p>{tab.details.priceNote}</p>}
           </div>
         )}
 
