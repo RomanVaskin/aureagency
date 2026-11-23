@@ -295,11 +295,11 @@ const SCENES: Record<string, [Ratio, string, string][]> = {
   // Реальные фото проекта: public/photos/apartamenty-serbiya-01…09.jpg
   'apartamenty-serbiya': [
     ['16/9', 'Столовая: круглый ореховый стол, кресла из оливкового бархата и люстра-облако', 'dining room with a round walnut table, olive velvet chairs, cloud-shaped pendant, panoramic windows'],
-    ['1/1', 'Гостиная с диваном букле и мраморным журнальным столиком', 'living room with a boucle sofa, green marble coffee table, walnut shelving with lighting, woven pendant'],
+    ['3/2', 'Гостиная с диваном букле и мраморным журнальным столиком', 'living room with a boucle sofa, green marble coffee table, walnut shelving with lighting, woven pendant'],
     ['4/5', 'Зона отдыха: кресло из оливкового бархата у подсвеченного стеллажа', 'lounge corner with an olive velvet armchair and pouf, backlit walnut shelving, olive tree in a stone pot, abstract stone-texture artwork, floor lamp'],
     ['4/5', 'Спальня: изголовье из ткани, вставки из зелёного мрамора', 'bedroom with an upholstered headboard, walnut and green marble wall, olive bedding, boucle bench'],
     ['2/3', 'Деталь спальни: ореховая тумба и лампа у кровати', 'detail of a walnut bedside table with a lamp beside a boucle bed and a green marble panel'],
-    ['1/1', 'Ванная с каменной ванной у окна в сад', 'bathroom with a freestanding stone bathtub by a window to the garden, walnut vanity'],
+    ['3/2', 'Ванная с каменной ванной у окна в сад', 'bathroom with a freestanding stone bathtub by a window to the garden, walnut vanity'],
     ['4/5', 'Раковина на мраморной столешнице и круглое зеркало с подсветкой', 'washbasin on a green marble vanity with walnut drawers and a round backlit mirror'],
     ['4/5', 'Вторая ванная: мрамор, орех и бронзовые бра', 'second bathroom with a green marble vanity, round backlit mirror and bronze wall lights'],
     ['1/1', 'Туалетный столик из мрамора у круглого зеркала', 'green marble dressing table with a round mirror, boucle stool and a vase with branches'],
