@@ -24,9 +24,9 @@ const COLUMNS: { title: string; items: Item[] }[] = [
 ]
 
 /** Подвал как в образце: логотип слева, три колонки ссылок справа, копирайт внизу. */
-export function SiteFooter({ compact = false }: { compact?: boolean }) {
+export function SiteFooter({ compact = false, topSpacing = 'pt-28 md:pt-44' }: { compact?: boolean; topSpacing?: string }) {
   return (
-    <footer className={`px-5 pb-6 pt-28 md:px-[5vw] md:pt-44 ${compact ? 'lg:pt-16' : ''}`}>
+    <footer className={`px-5 pb-6 md:px-[5vw] ${topSpacing} ${compact ? 'lg:pt-16' : ''}`}>
       <div className="grid gap-14 md:grid-cols-[1fr_1fr] md:gap-8">
         <div>
           <Logo height={17} />
