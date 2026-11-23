@@ -21,47 +21,49 @@ export function ProcessTimeline({
   steps: { title: string; text: string }[]
 }) {
   return (
-    <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
-      <Reveal>
-        <h2 className="text-[13px] text-muted-foreground">{label}</h2>
-        <p className={`mt-6 font-light tracking-[-0.02em] ${HEADING_SIZE}`}>
-          {heading}
-        </p>
-      </Reveal>
+    <section className="dusk-block mt-28 md:mt-48">
+      <div className="mx-auto max-w-[1600px] px-10 py-10 md:px-24 md:py-16">
+        <Reveal>
+          <h2 className="text-[13px] text-white/75">{label}</h2>
+          <p className={`mt-6 font-light tracking-[-0.02em] ${HEADING_SIZE}`}>
+            {heading}
+          </p>
+        </Reveal>
 
-      <InView
-        as="ol"
-        threshold={0.2}
-        className={`timeline mt-14 grid grid-cols-1 md:mt-24 ${COLS[steps.length] ?? 'md:grid-cols-4'}`}
-      >
-        {steps.map((s, i) => {
-          const last = i === steps.length - 1
-          return (
-            <li key={s.title} style={{ '--i': i } as CSSProperties}>
-              <div className="grid grid-cols-[12px_minmax(0,1fr)] gap-x-5 md:grid-cols-1 md:gap-x-0">
-                <p className="tl-num col-start-2 row-start-1 text-[15px] font-light leading-6 md:col-start-1 md:mb-4">
-                  {String(i + 1).padStart(2, '0')}
-                </p>
-                <div
-                  aria-hidden="true"
-                  className="col-start-1 row-span-3 row-start-1 flex flex-col items-center md:row-span-1 md:row-start-2 md:flex-row"
-                >
-                  <span className="tl-dot mt-1.5 size-3 shrink-0 rounded-full bg-foreground md:mt-0" />
-                  {!last && <span className="tl-line w-px flex-1 bg-foreground/45 md:h-px md:w-auto" />}
+        <InView
+          as="ol"
+          threshold={0.2}
+          className={`timeline mt-14 grid grid-cols-1 md:mt-24 ${COLS[steps.length] ?? 'md:grid-cols-4'}`}
+        >
+          {steps.map((s, i) => {
+            const last = i === steps.length - 1
+            return (
+              <li key={s.title} style={{ '--i': i } as CSSProperties}>
+                <div className="grid grid-cols-[12px_minmax(0,1fr)] gap-x-5 md:grid-cols-1 md:gap-x-0">
+                  <p className="tl-num col-start-2 row-start-1 text-[15px] font-light leading-6 md:col-start-1 md:mb-4">
+                    {String(i + 1).padStart(2, '0')}
+                  </p>
+                  <div
+                    aria-hidden="true"
+                    className="col-start-1 row-span-3 row-start-1 flex flex-col items-center md:row-span-1 md:row-start-2 md:flex-row"
+                  >
+                    <span className="tl-dot mt-1.5 size-3 shrink-0 rounded-full bg-white md:mt-0" />
+                    {!last && <span className="tl-line w-px flex-1 bg-white/45 md:h-px md:w-auto" />}
+                  </div>
+                  <h3 className="tl-name col-start-2 row-start-2 mt-2 text-[15px] font-medium uppercase leading-[1.3] tracking-[0.04em] md:col-start-1 md:row-start-3 md:mt-6 md:pr-8">
+                    {s.title}
+                  </h3>
+                  <p
+                    className={`tl-points col-start-2 row-start-3 mt-3 max-w-[340px] text-[15px] leading-[1.55] text-white/75 md:col-start-1 md:row-start-4 md:pr-8 md:pb-0 ${last ? '' : 'pb-10'}`}
+                  >
+                    {s.text}
+                  </p>
                 </div>
-                <h3 className="tl-name col-start-2 row-start-2 mt-2 text-[15px] font-medium uppercase leading-[1.3] tracking-[0.04em] md:col-start-1 md:row-start-3 md:mt-6 md:pr-8">
-                  {s.title}
-                </h3>
-                <p
-                  className={`tl-points col-start-2 row-start-3 mt-3 max-w-[340px] text-[15px] leading-[1.55] text-muted-foreground md:col-start-1 md:row-start-4 md:pr-8 md:pb-0 ${last ? '' : 'pb-10'}`}
-                >
-                  {s.text}
-                </p>
-              </div>
-            </li>
-          )
-        })}
-      </InView>
+              </li>
+            )
+          })}
+        </InView>
+      </div>
     </section>
   )
 }
