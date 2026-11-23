@@ -55,9 +55,12 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
                         <span aria-hidden="true" className="group-open:hidden">+</span>
                         <span aria-hidden="true" className="hidden group-open:inline">−</span>
                       </summary>
-                      <ul className="mb-3 list-disc space-y-1 pl-5">
-                        {includes.map((item) => <li key={item}>{item}</li>)}
-                      </ul>
+                      <div className="mb-3 space-y-2 pl-5">
+                        <p className="text-white">{includes.title}</p>
+                        <ul role="list" className="space-y-1">
+                          {includes.items.map((item) => <li key={item}>{item}</li>)}
+                        </ul>
+                      </div>
                     </details>
                   ) : title}
                 </li>
