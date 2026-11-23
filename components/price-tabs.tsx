@@ -43,7 +43,7 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
         )}
 
         {tab.details && (
-          <div className="mt-8 space-y-3 border-t border-white/20 pt-6 text-[15px] leading-relaxed text-white/75 md:mt-10">
+          <div className="mt-8 space-y-3 pt-6 text-[15px] leading-relaxed text-white/75 md:mt-10">
             <h3 className={detailsHeading}>{tab.details.title}</h3>
             <ul className="list-disc space-y-1 pl-5">
               {tab.details.scope.map(({ title, includes }) => (
