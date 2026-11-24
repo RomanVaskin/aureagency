@@ -65,7 +65,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </dl>
           <div className="space-y-6 text-[18px] font-light leading-[1.55] md:col-span-7 md:col-start-6 md:text-[22px]">
             {p.description.map((t) => (
-              <p key={t.slice(0, 24)}>{t}</p>
+              <p key={t.slice(0, 24)}>
+                {t.split(/(\*\*[^*]+\*\*)/).map((part, index) =>
+                  index % 2 === 0 ? part : <strong key={index}>{part.slice(2, -2)}</strong>
+                )}
+              </p>
             ))}
           </div>
         </section>
