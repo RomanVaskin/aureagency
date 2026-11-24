@@ -51,7 +51,7 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
                 <li key={title}>
                   {includes ? (
                     <details className="group">
-                      <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [&::-webkit-details-marker]:hidden">
+                      <summary className="flex cursor-pointer list-none items-center gap-3 text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [&::-webkit-details-marker]:hidden">
                         <span>{title}</span>
                         <span aria-hidden="true" className="group-open:hidden">+</span>
                         <span aria-hidden="true" className="hidden group-open:inline">−</span>
@@ -69,9 +69,7 @@ export function PriceTabs({ tabs }: { tabs: PriceTab[] }) {
             </ul>
             {tab.details.duration && <p><span className={detailsHeading}>Сроки</span> — {tab.details.duration}</p>}
             {tab.details.price && (
-              <p className="text-white">
-                <strong className="text-[18px] font-semibold md:text-[22px]">Стоимость — {tab.details.price}</strong>
-              </p>
+              <p>Стоимость — {tab.details.price}</p>
             )}
             {tab.details.priceNote && <p>{tab.details.priceNote}</p>}
           </div>
