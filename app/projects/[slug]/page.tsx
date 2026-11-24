@@ -31,6 +31,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const next = visibleProjects[(visibleIndex + 1) % visibleProjects.length]
   const [cover, ...gallery] = p.images
   const useTwoColumnGallery = p.slug === 'apartamenty-serbiya'
+  const pairGalleryPhotos = p.slug === 'kvartira-na-patriarshih'
 
   const facts = [
     ['Направление', categoryLabel(p.category)],
@@ -85,15 +86,18 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             // Широкие кадры — на всю ширину, вертикальные — со сдвигом то вправо, то к центру.
             const narrow = (r: string) => r === '4/5' || r === '1/1' || r === '2/3'
             const portrait = gallery.slice(0, i).filter((g) => narrow(g.ratio)).length
+            const pairPhoto = pairGalleryPhotos && narrow(im.ratio)
             const cls =
               !narrow(im.ratio)
                 ? 'md:col-span-12'
-                : portrait % 2 === 0
-                  ? 'md:col-span-6 md:col-start-4'
-                  : 'md:col-span-5 md:col-start-8'
+                : pairPhoto
+                  ? 'md:col-span-6'
+                  : portrait % 2 === 0
+                    ? 'md:col-span-6 md:col-start-4'
+                    : 'md:col-span-5 md:col-start-8'
             return (
               <Reveal key={im.src} className={useTwoColumnGallery ? (i < 2 ? 'md:col-span-2' : undefined) : cls}>
-                <ProjectImage {...im} tone={(p.tone + i + 1) % 4} variant={idx + i + 1} />
+                <ProjectImage {...im} ratio={pairPhoto ? '1/1' : im.ratio} tone={(p.tone + i + 1) % 4} variant={idx + i + 1} />
                 <p className="mt-3 text-[13px] text-muted-foreground">{im.alt}</p>
               </Reveal>
             )
