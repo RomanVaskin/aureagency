@@ -1,19 +1,20 @@
 import { SiteHeader } from '@/components/site-header'
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Geist_Mono, Inter, Jost } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
-const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const geistMono = localFont({ src: './fonts/geist-mono.woff2', weight: '100 900', variable: '--font-geist-mono' })
 /** Тексты, меню, подписи */
-const jost = Jost({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500'], variable: '--font-jost' })
+const jost = localFont({ src: './fonts/jost.woff2', weight: '100 900', variable: '--font-jost' })
 /** Пункты мобильного меню (.mobile-menu-link в globals.css) */
-const inter = Inter({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500'], variable: '--font-inter' })
+const inter = localFont({ src: './fonts/inter.woff2', weight: '100 900', variable: '--font-inter' })
 /** Заголовки проектов и разделов: серифные капслоком с широкой разрядкой */
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500'],
+const cormorant = localFont({
+  src: './fonts/cormorant-garamond.woff2',
+  weight: '300 700',
   variable: '--font-cormorant',
+  adjustFontFallback: 'Times New Roman',
 })
 
 const SITE_TITLE = 'EOS Bureau — студия архитектуры и дизайна интерьера'
