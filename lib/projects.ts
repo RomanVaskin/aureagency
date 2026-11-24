@@ -359,7 +359,11 @@ const SCENES: Record<string, [Ratio, string, string][]> = {
 
 for (const p of PROJECTS) {
   if (p.images.length > 0) continue
-  p.images = (SCENES[p.slug] ?? []).map(([ratio, alt, scene], i) => img(p.slug, i + 1, ratio, alt, scene))
+  const images = (SCENES[p.slug] ?? []).map(([ratio, alt, scene], i) => img(p.slug, i + 1, ratio, alt, scene))
+  // Переносим ванную после гостиной, сохраняя номера файлов и подписи.
+  p.images = p.slug === 'apartamenty-serbiya'
+    ? [...images.slice(0, 2), ...images.slice(5, 6), ...images.slice(2, 5), ...images.slice(6)]
+    : images
 }
 
 /** Кадры вне проектов: главный экран, студия. */
