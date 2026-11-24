@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { SiteFooter } from '@/components/site-footer'
 import { ProjectImage } from '@/components/project-image'
 import { Reveal } from '@/components/reveal'
+import { getVisibleProjects } from '@/lib/project-catalog'
 import { PROJECTS, categoryLabel, getProject } from '@/lib/projects'
 
 export function generateStaticParams() {
@@ -25,7 +26,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!p) notFound()
 
   const idx = PROJECTS.indexOf(p)
-  const next = PROJECTS[(idx + 1) % PROJECTS.length]
+  const visibleProjects = getVisibleProjects()
+  const visibleIndex = visibleProjects.indexOf(p)
+  const next = visibleProjects[(visibleIndex + 1) % visibleProjects.length]
   const [cover, ...gallery] = p.images
   const useTwoColumnGallery = p.slug === 'apartamenty-serbiya'
 
@@ -97,14 +100,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           })}
         </section>
 
-        <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
-          <Link href={`/projects/${next.slug}`} className="group block border-t border-border pt-8">
-            <span className="text-[13px] text-muted-foreground">Следующий проект</span>
-            <span className="mt-3 block text-[32px] font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 md:text-[56px]">
-              {next.title} →
-            </span>
-          </Link>
-        </section>
+        {next && next !== p && (
+          <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
+            <Link href={`/projects/${next.slug}`} className="group block border-t border-border pt-8">
+              <span className="text-[13px] text-muted-foreground">Следующий проект</span>
+              <span className="mt-3 block text-[32px] font-light tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-2 md:text-[56px]">
+                {next.title} →
+              </span>
+            </Link>
+          </section>
+        )}
       </main>
       <SiteFooter />
     </>
