@@ -108,7 +108,7 @@ export const PROJECTS: Project[] = [
     slug: 'dzen-spa',
     title: 'Дзен-спа в японском стиле',
     category: 'commercial',
-    location: 'Москва',
+    location: 'Ленинградская обл',
     year: 2024,
     area: '260 м²',
     status: 'Реализован',
