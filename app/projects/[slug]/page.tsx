@@ -92,7 +92,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   ? 'md:col-span-6 md:col-start-4'
                   : 'md:col-span-5 md:col-start-8'
             return (
-              <Reveal key={im.src} className={useTwoColumnGallery ? undefined : cls}>
+              <Reveal key={im.src} className={useTwoColumnGallery ? (i < 2 ? 'md:col-span-2' : undefined) : cls}>
                 <ProjectImage {...im} tone={(p.tone + i + 1) % 4} variant={idx + i + 1} />
                 <p className="mt-3 text-[13px] text-muted-foreground">{im.alt}</p>
               </Reveal>
