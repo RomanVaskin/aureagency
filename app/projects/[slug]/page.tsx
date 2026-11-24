@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const idx = PROJECTS.indexOf(p)
   const next = PROJECTS[(idx + 1) % PROJECTS.length]
   const [cover, ...gallery] = p.images
-  const useHorizontalGallery = p.slug === 'apartamenty-serbiya'
+  const useTwoColumnGallery = p.slug === 'apartamenty-serbiya'
 
   const facts = [
     ['Направление', categoryLabel(p.category)],
@@ -75,45 +75,27 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
 
-        {useHorizontalGallery ? (
-          <section className="mx-auto max-w-[1600px] px-5 pt-20 md:px-10 md:pt-36">
-            <div
-              role="region"
-              aria-label="Фотографии проекта"
-              tabIndex={0}
-              className="grid auto-cols-[min(80%,24rem)] grid-flow-col items-start gap-4 overflow-x-auto pb-3 md:gap-6"
-            >
-              {gallery.map((im, i) => (
-                <figure key={im.src} className="min-w-0">
-                  <div className="aspect-[4/5]">
-                    <ProjectImage {...im} fill tone={(p.tone + i + 1) % 4} variant={idx + i + 1} />
-                  </div>
-                  <figcaption className="mt-3 text-[13px] text-muted-foreground">{im.alt}</figcaption>
-                </figure>
-              ))}
-            </div>
-          </section>
-        ) : (
-          <section className="mx-auto grid max-w-[1600px] gap-6 px-5 pt-20 md:grid-cols-12 md:gap-8 md:px-10 md:pt-36">
-            {gallery.map((im, i) => {
-              // Широкие кадры — на всю ширину, вертикальные — со сдвигом то вправо, то к центру.
-              const narrow = (r: string) => r === '4/5' || r === '1/1' || r === '2/3'
-              const portrait = gallery.slice(0, i).filter((g) => narrow(g.ratio)).length
-              const cls =
-                !narrow(im.ratio)
-                  ? 'md:col-span-12'
-                  : portrait % 2 === 0
-                    ? 'md:col-span-6 md:col-start-4'
-                    : 'md:col-span-5 md:col-start-8'
-              return (
-                <Reveal key={im.src} className={cls}>
-                  <ProjectImage {...im} tone={(p.tone + i + 1) % 4} variant={idx + i + 1} />
-                  <p className="mt-3 text-[13px] text-muted-foreground">{im.alt}</p>
-                </Reveal>
-              )
-            })}
-          </section>
-        )}
+        <section className={`mx-auto grid max-w-[1600px] gap-6 px-5 pt-20 md:gap-8 md:px-10 md:pt-36 ${
+          useTwoColumnGallery ? 'md:grid-cols-2' : 'md:grid-cols-12'
+        }`}>
+          {gallery.map((im, i) => {
+            // Широкие кадры — на всю ширину, вертикальные — со сдвигом то вправо, то к центру.
+            const narrow = (r: string) => r === '4/5' || r === '1/1' || r === '2/3'
+            const portrait = gallery.slice(0, i).filter((g) => narrow(g.ratio)).length
+            const cls =
+              !narrow(im.ratio)
+                ? 'md:col-span-12'
+                : portrait % 2 === 0
+                  ? 'md:col-span-6 md:col-start-4'
+                  : 'md:col-span-5 md:col-start-8'
+            return (
+              <Reveal key={im.src} className={useTwoColumnGallery ? undefined : cls}>
+                <ProjectImage {...im} tone={(p.tone + i + 1) % 4} variant={idx + i + 1} />
+                <p className="mt-3 text-[13px] text-muted-foreground">{im.alt}</p>
+              </Reveal>
+            )
+          })}
+        </section>
 
         <section className="mx-auto max-w-[1600px] px-5 pt-28 md:px-10 md:pt-48">
           <Link href={`/projects/${next.slug}`} className="group block border-t border-border pt-8">
