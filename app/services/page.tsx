@@ -7,8 +7,8 @@ import { PriceTabs } from '@/components/price-tabs'
 import { PRICE_TABS } from '@/lib/pricing'
 
 export const metadata: Metadata = {
-  title: 'Услуги — EOS Bureau',
-  description: 'EOS Bureau — студия архитектуры и дизайна интерьера в Москве. Подход, услуги и этапы работы.',
+  title: 'Дизайн-проект интерьера и авторский надзор — EOS Bureau',
+  description: 'Дизайн-проект интерьера от EOS Bureau: планировка, визуализации, рабочая документация и спецификации. Состав услуг и стоимость авторского надзора.',
   alternates: { canonical: '/services' },
 }
 
