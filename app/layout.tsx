@@ -17,9 +17,9 @@ const cormorant = localFont({
   adjustFontFallback: 'Times New Roman',
 })
 
-const SITE_TITLE = 'EOS Bureau — студия архитектуры и дизайна интерьера'
+const SITE_TITLE = 'Студия архитектуры и дизайна интерьера в Москве — EOS Bureau'
 const SITE_DESCRIPTION =
-  'EOS Bureau — студия архитектуры и дизайна интерьера в Москве. Частные дома, квартиры, отели и рестораны: тихие пространства из натуральных материалов.'
+  'EOS Bureau проектирует интерьеры квартир, частных домов, ресторанов и других коммерческих пространств. Студия в Москве, работаем по всему миру.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://eosbureau.ru'),

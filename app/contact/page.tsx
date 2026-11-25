@@ -5,8 +5,8 @@ import { CITY, EMAIL, PHONE, PHONE_HREF, TELEGRAM_URL, WHATSAPP_URL } from '@/li
 import { ContactForm } from './contact-form'
 
 export const metadata: Metadata = {
-  title: 'Контакты — EOS Bureau',
-  description: 'Расскажите о своём доме, квартире или общественном пространстве — студия EOS Bureau ответит в течение дня.',
+  title: 'Контакты студии дизайна интерьера EOS Bureau',
+  description: 'Свяжитесь со студией EOS Bureau по телефону, в Telegram или WhatsApp. Оставьте заявку на дизайн-проект через форму на сайте. Работаем по всему миру.',
   alternates: { canonical: '/contact' },
 }
 
