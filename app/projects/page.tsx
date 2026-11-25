@@ -7,8 +7,8 @@ import { getVisibleProjects } from '@/lib/project-catalog'
 import { CATEGORIES } from '@/lib/projects'
 
 export const metadata: Metadata = {
-  title: 'Проекты — EOS Bureau',
-  description: 'Коммерческие помещения, частные дома и квартиры — проекты студии EOS Bureau.',
+  title: 'Портфолио интерьеров квартир и ресторанов — EOS Bureau',
+  description: 'Проекты EOS Bureau: квартиры и апартаменты, пентхаус, рестораны и спа. Фотографии, описания интерьеров и материалы по каждому проекту.',
   alternates: { canonical: '/projects' },
 }
 
